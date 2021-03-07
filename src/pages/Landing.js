@@ -2,7 +2,7 @@
 /** @jsx jsx */
 import React from "react";
 import { jsx } from "theme-ui";
-import LookingForWork from "./LookingForWork";
+import LookingForWork from "../components/LookingForWork";
 import Projects from "./Projects";
 
 export default function Landing(props) {

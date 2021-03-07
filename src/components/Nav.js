@@ -12,6 +12,14 @@ export default function Nav() {
           letterSpacing: "4px",
           padding: "0.5rem 3rem",
           textAlign: "right",
+          li: {
+            cursor: "pointer",
+            paddingLeft: "1rem",
+            ":hover": {
+              backgroundColor: "#333",
+              color: "#EEE",
+            },
+          },
         }}
       >
         <li>ABOUT </li>

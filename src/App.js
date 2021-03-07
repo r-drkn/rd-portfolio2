@@ -1,7 +1,7 @@
 import React from "react";
 import theme from "./theme";
 import { ThemeProvider } from "theme-ui";
-import Landing from "./components/Landing";
+import Landing from "./pages/Landing";
 import Nav from "./components/Nav";
 // import { BrowseRouter as Router } from "react-router-dom";
 
