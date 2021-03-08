@@ -9,7 +9,6 @@ export default function MainContainer({ children }) {
       style={{
         width: "92.5vw",
         height: "80vh",
-        // padding: "0 3rem 1rem 3rem",
         margin: "0 3rem",
       }}
     >

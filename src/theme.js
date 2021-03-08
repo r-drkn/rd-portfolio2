@@ -1,5 +1,3 @@
-import Barlow from "./fonts.css";
-
 const theme = {
   colors: {
     text: "#333",

@@ -1,7 +1,7 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import React, { useState } from "react";
-import BackArrow from "./back-arrow.png";
+import BackArrow from "../icons/back-arrow.png";
 import { jsx } from "theme-ui";
 import { Redirect } from "react-router-dom";
 

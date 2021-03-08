@@ -12,7 +12,6 @@ const NavItem = (props) => {
         to={`/${item}`}
         sx={{
           color: "text",
-          margin: "1rem",
           ":hover": {
             backgroundColor: "#333",
             color: "#EEE",
@@ -33,12 +32,13 @@ export default function Nav() {
           fontFamily: "main",
           listStyle: "none",
           letterSpacing: "4px",
-          padding: "0.5rem 3rem",
+          padding: "0rem 3rem",
           textAlign: "right",
           color: "text",
           li: {
             cursor: "pointer",
             paddingLeft: "1rem",
+            margin: "0.5rem",
           },
         }}
       >

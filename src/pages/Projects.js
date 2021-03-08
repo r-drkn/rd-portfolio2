@@ -1,15 +1,42 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { jsx } from "theme-ui";
 import BackButton from "../components/BackButton";
+import Plus from "../icons/plus.png";
 
 export default function Projects() {
   const [showProject, setShowProject] = useState("");
 
-  useEffect(() => {
-    setShowProject("");
-  }, []);
+  const ListItem = (props) => {
+    const { project, children } = props;
+    const [rotate, setRotate] = useState(false);
+
+    return (
+      (showProject === "" || showProject === project) && (
+        <li
+          onClick={() => {
+            showProject ? setShowProject("") : setShowProject(project);
+          }}
+        >
+          {children}
+          <button
+            sx={{
+              border: "none",
+              cursor: "pointer",
+              backgroundColor: "inherit",
+            }}
+          >
+            <img
+              src={Plus}
+              alt="view more"
+              sx={{ height: "2rem", transform: showProject && "rotate(45deg)" }}
+            />
+          </button>
+        </li>
+      )
+    );
+  };
 
   return (
     <div sx={{ height: "100%", padding: "1rem" }}>
@@ -25,7 +52,7 @@ export default function Projects() {
         }}
       >
         <h1 sx={{ fontWeight: 400, paddingLeft: "1rem" }}>PROJECTS</h1>
-        <BackButton setShowProject={setShowProject} />
+        {showProject && <BackButton setShowProject={setShowProject} />}
       </div>
 
       <ul
@@ -33,49 +60,40 @@ export default function Projects() {
           fontFamily: "main",
           margin: "0",
           fontSize: "1.5rem",
-          padding: "0rem 2.5rem",
+          padding: "0rem 0rem",
           li: {
-            padding: "1rem 0",
+            padding: "1rem",
             cursor: "pointer",
             listStyle: "none",
+            width: "100%",
+            display: "flex",
+            justifyContent: "space-between",
+            borderRadius: "1rem",
+            ":hover": {
+              backgroundColor: "blue",
+            },
           },
         }}
       >
-        {(showProject === "" || showProject === "catalog") && (
-          <li
-            onClick={() => {
-              setShowProject("catalog");
-            }}
-          >
-            catalogmusic.co //{" "}
-            <em>
-              online shop for a vinyl record store in Brisbane built in MERN
-            </em>
-          </li>
-        )}
-        {(showProject === "" || showProject === "portfolio2") && (
-          <li
-            onClick={() => {
-              setShowProject("portfolio2");
-            }}
-          >
-            Portfolio v2 //{" "}
-            <em>current portfolio built in React with Theme UI</em>
-          </li>
-        )}
-        {(showProject === "" || showProject === "portfolio1") && (
-          <li
-            onClick={() => {
-              setShowProject("portfolio1");
-            }}
-          >
-            Portfolio v1 //{" "}
-            <em>
-              built in html and css, my original portfolio before learning
-              JS/React
-            </em>
-          </li>
-        )}
+        <ListItem project="catalog">
+          catalogmusic.co //{" "}
+          <em>
+            online shop for a vinyl record store in Brisbane built in MERN
+          </em>
+        </ListItem>
+
+        <ListItem project="portfolio2">
+          Portfolio v2 //{" "}
+          <em>current portfolio built in React with Theme UI</em>
+        </ListItem>
+
+        <ListItem project="portfolio1">
+          Portfolio v1 //{" "}
+          <em>
+            built in html and css, my original portfolio before learning
+            JS/React
+          </em>
+        </ListItem>
       </ul>
     </div>
   );
