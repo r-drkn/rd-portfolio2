@@ -1,27 +1,46 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { jsx } from "theme-ui";
 import BackButton from "../components/BackButton";
 
 export default function Projects() {
   const [showProject, setShowProject] = useState("");
 
+  useEffect(() => {
+    setShowProject("");
+  }, []);
+
   return (
-    <div>
+    <div sx={{ height: "100%", padding: "1rem" }}>
       <div
         sx={{
+          fontFamily: "main",
           width: "100%",
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
+          borderBottom: "2px solid black",
+          marginBottom: "1rem",
         }}
       >
         <h1 sx={{ fontWeight: 400, paddingLeft: "1rem" }}>PROJECTS</h1>
-        <BackButton />
+        <BackButton setShowProject={setShowProject} />
       </div>
 
-      <ul sx={{ fontSize: "1.5rem", li: { padding: "1rem 0" } }}>
+      <ul
+        sx={{
+          fontFamily: "main",
+          margin: "0",
+          fontSize: "1.5rem",
+          padding: "0rem 2.5rem",
+          li: {
+            padding: "1rem 0",
+            cursor: "pointer",
+            listStyle: "none",
+          },
+        }}
+      >
         {(showProject === "" || showProject === "catalog") && (
           <li
             onClick={() => {
