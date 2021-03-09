@@ -6,7 +6,7 @@ import { jsx } from "theme-ui";
 export default function LookingForWork(props) {
   return (
     <div
-      style={{
+      sx={{
         backgroundColor: "blue",
         height: "10rem",
         width: "10rem",
@@ -15,19 +15,18 @@ export default function LookingForWork(props) {
         display: "flex",
         flexDirection: "center",
         alignItems: "center",
-        padding: "1rem",
         gridArea: props.gridArea,
-        position: "relative",
+        fontFamily: "main",
       }}
     >
       <svg
-        viewBox="0 0 200 200"
+        viewBox="0 0 150 150"
         sx={{
           position: "absolute",
           circle: {
             strokeDasharray: "15",
             strokeDashoffset: "160",
-            animation: "spin 0s linear infinite",
+            animation: "spin 30s linear infinite",
             "@keyframes spin": {
               to: {
                 strokeDashoffset: "0",
@@ -35,21 +34,28 @@ export default function LookingForWork(props) {
             },
           },
         }}
-        height="200"
-        width="200"
+        height="160"
+        width="160"
       >
         <circle
-          cx="65"
-          cy="100"
-          r="70"
+          cx="76"
+          cy="76"
+          r="65"
           stroke="#EEE"
           stroke-width="5"
           // strokeDasharray="10"
           fill="none"
         />
       </svg>
-      <p style={{ textAlign: "center", backgroundColor: "none" }}>
-        Currently Looking For Work
+      <p
+        style={{
+          textAlign: "center",
+          backgroundColor: "none",
+          padding: "1rem",
+        }}
+      >
+        Currently Looking For Work. <br />
+        <span>Hit me up!</span>
       </p>
     </div>
   );

@@ -2,6 +2,7 @@
 /** @jsx jsx */
 import React from "react";
 import { jsx } from "theme-ui";
+import Selfie from "../images/selfie-test.JPG";
 import LookingForWork from "../components/LookingForWork";
 
 export default function Landing(props) {
@@ -34,10 +35,11 @@ export default function Landing(props) {
       </h1>
       <div
         sx={{
-          gridArea: "2 / 8 / 4 / 12",
+          gridArea: "2 / 8/ 4 / 14",
           display: "flex",
+          justifyCenter: "center",
           alignItems: "center",
-          padding: "1rem",
+          padding: "2.5rem",
         }}
       >
         <svg
@@ -87,11 +89,14 @@ export default function Landing(props) {
       </h2>
       <div
         sx={{
-          gridArea: "2 / 11 / 6 / 16",
-          border: "2px solid #333",
-          margin: "1rem",
+          gridArea: "2/ 13 / 6 / 17",
+          marginTop: "2rem",
+          paddingRight: "1rem",
+          marginBottom: "2.5rem",
         }}
-      ></div>
+      >
+        <img src={Selfie} alt="Photo of Rob" sx={{ width: "100%" }} />
+      </div>
       <div
         sx={{
           gridArea: "5/ 2 / 8 / 10 ",
@@ -100,11 +105,10 @@ export default function Landing(props) {
           margin: "auto",
         }}
       >
-        I'm a Junior Developer based in Brisbane specializing in MERN based
-        applications with a particularly interested in the front end side of
-        projects.
+        I'm a Junior Developer living in Brisbane specializing in MERN based
+        applications with a particular interest in front end development.
       </div>
-      <LookingForWork gridArea="7 / 13 / 9 / 15 " />
+      <LookingForWork gridArea="7 / 13 / 9 / 16 " />
     </div>
   );
 }

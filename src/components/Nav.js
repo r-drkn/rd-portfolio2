@@ -44,10 +44,11 @@ export default function Nav() {
           maxWidth: "1280px",
           mx: "auto",
           px: "1rem",
+          py: "0.5rem",
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
-          backgroundColor: "rgba(238, 238, 238, 0.7)",
+          backgroundColor: "rgba(220, 220, 220, 0.7)",
         }}
       >
         <div
