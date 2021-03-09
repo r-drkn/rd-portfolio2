@@ -2,6 +2,7 @@
 /** @jsx jsx */
 import React from "react";
 import { jsx } from "theme-ui";
+import LookingForWork from "../components/LookingForWork";
 
 export default function Landing(props) {
   return (
@@ -41,7 +42,7 @@ export default function Landing(props) {
       >
         <svg
           viewBox="0 0 152 35"
-          width="100%"
+          width="80%"
           height="100%"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -77,20 +78,33 @@ export default function Landing(props) {
           fontSize: "2.5rem",
           padding: 0,
           margin: 0,
-          gridArea: "4/ 2 / 9 / 11",
+          gridArea: "4/ 2 / 5 / 11",
           fontWeight: "600",
         }}
       >
         <span sx={{ fontSize: "3rem" }}>And I make things</span> <br />
         on the internet.
       </h2>
-      <div sx={{ gridArea: "2 / 12 / 6 / 16", border: "2px solid #333" }}></div>
-      {/* <div
-        sx={{ width: "50%", height: "100%", border: "1px solid #999" }}
+      <div
+        sx={{
+          gridArea: "2 / 11 / 6 / 16",
+          border: "2px solid #333",
+          margin: "1rem",
+        }}
       ></div>
       <div
-        sx={{ width: "50%", height: "100%", border: "1px solid #999" }}
-      ></div> */}
+        sx={{
+          gridArea: "5/ 2 / 8 / 10 ",
+          fontSize: "1.2rem",
+          textAlign: "justify",
+          margin: "auto",
+        }}
+      >
+        I'm a Junior Developer based in Brisbane specializing in MERN based
+        applications with a particularly interested in the front end side of
+        projects.
+      </div>
+      <LookingForWork gridArea="7 / 13 / 9 / 15 " />
     </div>
   );
 }
