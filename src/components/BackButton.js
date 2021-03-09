@@ -21,6 +21,10 @@ export default function BackButton({ setShowProject }) {
           padding: "0.5rem 0.5rem",
           fontSize: "1rem",
           cursor: "pointer",
+          position: "fixed",
+          right: "3.5rem",
+          top: "8rem",
+          backgroundColor: "inherit",
           ":hover": {
             border: "1px solid #333",
             boxShadow: "0px 1px 1px 0px",

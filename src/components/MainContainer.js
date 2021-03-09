@@ -5,14 +5,18 @@ import { jsx } from "theme-ui";
 
 export default function MainContainer({ children }) {
   return (
-    <div
-      style={{
-        width: "92.5vw",
-        height: "80vh",
-        margin: "0 3rem",
+    <main
+      sx={{
+        width: "100%",
+        maxWidth: "900px",
+        paddingTop: "10vh",
+        // borderLeft: "2px solid #777",
+        // borderRight: "2px solid #777",
+        mx: "auto",
+        // overflowX: "hidden",
       }}
     >
       {children}
-    </div>
+    </main>
   );
 }
