@@ -12,8 +12,10 @@ const NavItem = (props) => {
         href={`/#${item}`}
         sx={{
           color: "text",
-          backgroundColor: "#eee",
-
+          cursor: "pointer",
+          paddingLeft: "1rem",
+          margin: "0.5rem",
+          backgroundColor: "none",
           ":hover": {
             backgroundColor: "#333",
             color: "#EEE",
@@ -45,7 +47,6 @@ export default function Nav() {
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
-          // backgroundColor: "#EEEEEE",
           backgroundColor: "rgba(238, 238, 238, 0.7)",
         }}
       >
@@ -64,12 +65,7 @@ export default function Nav() {
             textAlign: "right",
             color: "text",
             display: "flex",
-            li: {
-              cursor: "pointer",
-              paddingLeft: "1rem",
-              margin: "0.5rem",
-              backgroundColor: "#eee",
-            },
+            backgroundColor: "none",
           }}
         >
           <NavItem item="about" />

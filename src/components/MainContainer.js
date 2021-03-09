@@ -12,6 +12,7 @@ export default function MainContainer({ children }) {
         paddingTop: "10vh",
         // borderLeft: "2px solid #777",
         // borderRight: "2px solid #777",
+        backgroundColor: "#DDD",
         mx: "auto",
         // overflowX: "hidden",
       }}
