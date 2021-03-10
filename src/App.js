@@ -4,7 +4,7 @@ import { ThemeProvider } from "theme-ui";
 import Landing from "./pages/Landing";
 import Nav from "./components/Nav";
 import Projects from "./pages/Projects/Projects";
-import About from "./pages/About"
+import About from "./pages/About";
 import MainContainer from "./components/MainContainer";
 
 function App() {
@@ -14,8 +14,8 @@ function App() {
         <Nav />
         <MainContainer>
           <Landing />
-          <About />
           <Projects />
+          <About />
         </MainContainer>
       </ThemeProvider>
     </div>

@@ -4,12 +4,13 @@ import React, { useState } from "react";
 import { jsx } from "theme-ui";
 import BackButton from "../../components/BackButton";
 import ProjectListItem from "./ProjectListItem";
+import ProjectCardItem from "./ProjectCardItem";
 
 export default function Projects() {
   const [showProject, setShowProject] = useState("");
 
   return (
-    <div id="projects" sx={{ height: "100vh", paddingTop: "10vh" }}>
+    <div id="projects" sx={{ height: "200vh", paddingTop: "10vh" }}>
       <div
         sx={{
           fontFamily: "main",
@@ -24,7 +25,9 @@ export default function Projects() {
         {showProject && <BackButton setShowProject={setShowProject} />}
       </div>
 
-      <ul
+      <ProjectCardItem />
+
+      {/* <ul
         sx={{
           fontFamily: "main",
           margin: "0",
@@ -62,8 +65,8 @@ export default function Projects() {
             JS/React
           </em>
         </ProjectListItem>
-      </ul>
-      {showProject === "catalog" && (
+      </ul> */}
+      {/* {showProject === "catalog" && (
         <div
           sx={{
             height: "100vh",
@@ -93,7 +96,7 @@ export default function Projects() {
             </p>
           </div>
         </div>
-      )}
+      )} */}
     </div>
   );
 }

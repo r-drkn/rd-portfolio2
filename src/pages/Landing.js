@@ -35,7 +35,7 @@ export default function Landing(props) {
       </h1>
       <div
         sx={{
-          gridArea: "2 / 8/ 4 / 14",
+          gridArea: "3 / 8/ 5 / 14",
           display: "flex",
           justifyCenter: "center",
           alignItems: "center",
@@ -84,15 +84,13 @@ export default function Landing(props) {
           fontWeight: "600",
         }}
       >
-        <span sx={{ fontSize: "3rem" }}>And I make things</span> <br />
+        <span sx={{ fontSize: "3rem" }}>I make things</span> <br />
         on the internet.
       </h2>
       <div
         sx={{
-          gridArea: "2/ 13 / 6 / 17",
-          marginTop: "2rem",
-          paddingRight: "1rem",
-          marginBottom: "2.5rem",
+          gridArea: "2 / 13 / 6 / 17",
+          // paddingTop: "3rem",
         }}
       >
         <img src={Selfie} alt="Photo of Rob" sx={{ width: "100%" }} />
