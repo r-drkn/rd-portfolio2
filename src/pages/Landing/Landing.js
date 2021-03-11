@@ -2,17 +2,25 @@
 /** @jsx jsx */
 import React, { useEffect, useRef } from "react";
 import { jsx } from "theme-ui";
-import Selfie from "../images/selfie-test.JPG";
-import LookingForWork from "../components/LookingForWork";
-import { landingHeading } from "../components/animate.js";
+import Selfie from "../../images/selfie-test.JPG";
+import LookingForWork from "../../components/LookingForWork";
+import { landingAnimate } from "./landingAnimate.js";
+import gsap from "gsap";
 
 export default function Landing(props) {
   let heading = useRef(null);
+  let byline = useRef(null);
+  let description = useRef(null);
+  let tl = useRef(gsap.timeline());
 
   useEffect(() => {
     heading.style.visibility = "visible";
-
-    landingHeading(heading);
+    byline.style.visibility = "visible";
+    description.style.visibility = "visible";
+    tl.current
+      .from(heading, landingAnimate.heading)
+      .from(byline, landingAnimate.byline)
+      .from(description, landingAnimate.description);
   }, []);
 
   return (
@@ -88,7 +96,9 @@ export default function Landing(props) {
         </svg>
       </div>
       <h2
+        ref={(el) => (byline = el)}
         sx={{
+          visibility: "hidden",
           fontSize: "2.5rem",
           padding: 0,
           margin: 0,
@@ -102,21 +112,24 @@ export default function Landing(props) {
       <div
         sx={{
           gridArea: "3 / 13 / 5 / 16",
-          // paddingTop: "3rem",
         }}
       >
-        <img src={Selfie} alt="Photo of Rob" sx={{ width: "100%" }} />
+        <img src={Selfie} alt="Rob" sx={{ width: "100%" }} />
       </div>
       <div
+        s
         sx={{
-          gridArea: "5/ 2 / 8 / 10 ",
+          visibility: "hidden",
+          gridArea: "5 / 2 / 8 / 10 ",
           fontSize: "1.2rem",
           textAlign: "justify",
           margin: "auto",
         }}
       >
-        I'm a Junior Developer living in Brisbane specializing in MERN based
-        applications with a particular interest in front end development.
+        <p ref={(el) => (description = el)}>
+          I'm a Junior Developer living in Brisbane specializing in MERN based
+          applications with a particular interest in front end development.
+        </p>
       </div>
       <LookingForWork gridArea="6 / 13 / 8 / 16 " />
     </div>
