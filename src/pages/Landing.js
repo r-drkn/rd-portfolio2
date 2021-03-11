@@ -1,11 +1,20 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { jsx } from "theme-ui";
 import Selfie from "../images/selfie-test.JPG";
 import LookingForWork from "../components/LookingForWork";
+import { landingHeading } from "../components/animate.js";
 
 export default function Landing(props) {
+  let heading = useRef(null);
+
+  useEffect(() => {
+    heading.style.visibility = "visible";
+
+    landingHeading(heading);
+  }, []);
+
   return (
     <div
       sx={{
@@ -21,7 +30,10 @@ export default function Landing(props) {
       }}
     >
       <h1
+        className="heading"
+        ref={(el) => (heading = el)}
         sx={{
+          visibility: "hidden",
           fontSize: "4rem",
           gridArea: "2 / 2 / 4 / 9",
           padding: 0,
@@ -31,7 +43,7 @@ export default function Landing(props) {
           fontWeight: "600",
         }}
       >
-        Hi I'm Rob
+        Hi, I'm Rob.
       </h1>
       <div
         sx={{
@@ -64,14 +76,14 @@ export default function Landing(props) {
           <path
             d="M136 17h-7c-9 0-12 8-18 0-7-8-13-8-19 0s-12 8-18 0-12-8-18 0-12 8-18 0-12-8-18 0-12 8-18 0"
             stroke="#4C75F2"
-            stroke-width="7"
-            stroke-linecap="round"
+            strokeWidth="7"
+            strokeLinecap="round"
           />
           <path
             d="M133 3l15 15-15 14"
             stroke="#4C75F2"
-            stroke-width="7"
-            stroke-linecap="round"
+            strokeWidth="7"
+            strokeLinecap="round"
           />
         </svg>
       </div>
@@ -89,7 +101,7 @@ export default function Landing(props) {
       </h2>
       <div
         sx={{
-          gridArea: "2 / 13 / 6 / 17",
+          gridArea: "3 / 13 / 5 / 16",
           // paddingTop: "3rem",
         }}
       >
@@ -106,7 +118,7 @@ export default function Landing(props) {
         I'm a Junior Developer living in Brisbane specializing in MERN based
         applications with a particular interest in front end development.
       </div>
-      <LookingForWork gridArea="7 / 13 / 9 / 16 " />
+      <LookingForWork gridArea="6 / 13 / 8 / 16 " />
     </div>
   );
 }

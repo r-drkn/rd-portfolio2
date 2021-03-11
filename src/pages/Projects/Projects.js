@@ -1,31 +1,33 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import React, { useState } from "react";
+import React from "react";
 import { jsx } from "theme-ui";
-import BackButton from "../../components/BackButton";
-import ProjectListItem from "./ProjectListItem";
 import ProjectCardItem from "./ProjectCardItem";
 
 export default function Projects() {
-  const [showProject, setShowProject] = useState("");
+  const projects = [
+    {
+      title: "catalogmusic.co",
+      description:
+        "Building the Catalog Music website was the capstone project in completion of my Bootcamp. It is a fully functional web store for a vinyl record store in Brisbane's Fortitude Valley, built in MERN.",
+      techStack: ["MERN, Material UI, Discogs API, Square"],
+    },
+    {
+      title: "catalogmusic.co 2",
+      description:
+        "Building the Catalog Music website was the capstone project in completion of my Bootcamp. It is a fully functional web store for a vinyl record store in Brisbane's Fortitude Valley, built in MERN.",
+      techStack: ["MERN, Material UI, Discogs API, Square"],
+    },
+  ];
 
   return (
     <div id="projects" sx={{ height: "200vh", paddingTop: "10vh" }}>
-      <div
-        sx={{
-          fontFamily: "main",
-          width: "100%",
-          display: "flex",
-          alignItems: "center",
-          borderBottom: "2px solid black",
-          marginBottom: "1rem",
-        }}
-      >
-        <h1 sx={{ fontWeight: 400, paddingLeft: "1rem" }}>PROJECTS</h1>
-        {showProject && <BackButton setShowProject={setShowProject} />}
-      </div>
-
-      <ProjectCardItem />
+      {projects.map((project, index) => {
+        const alt = index % 2 === 0;
+        return (
+          <ProjectCardItem project={project} alt={alt} key={project.title} />
+        );
+      })}
 
       {/* <ul
         sx={{

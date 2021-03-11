@@ -33,6 +33,11 @@ export default function LookingForWork(props) {
               },
             },
           },
+          "&:hover": {
+            border: "3px solid #EEE",
+            padding: "0.5rem",
+            borderRadius: "50%",
+          },
         }}
         height="160"
         width="160"
@@ -42,7 +47,7 @@ export default function LookingForWork(props) {
           cy="76"
           r="65"
           stroke="#EEE"
-          stroke-width="5"
+          strokeWidth="5"
           // strokeDasharray="10"
           fill="none"
         />
@@ -54,8 +59,7 @@ export default function LookingForWork(props) {
           padding: "1rem",
         }}
       >
-        Currently Looking For Work. <br />
-        <span>Hit me up!</span>
+        Currently Looking For Work.
       </p>
     </div>
   );
