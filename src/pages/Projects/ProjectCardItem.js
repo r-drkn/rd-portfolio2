@@ -38,8 +38,7 @@ export default function ProjectCardItem(props) {
     <div
       className={project.title.replace(/\s+/g, "")}
       sx={{
-        my: "50vh",
-        height: "100vh",
+        height: "75vh",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
@@ -54,22 +53,30 @@ export default function ProjectCardItem(props) {
           padding: "2rem",
         }}
       >
-        <div sx={{ gridArea: "2 / 1 / 3 / 10" }}>
+        <div
+          sx={{
+            gridArea: "2 / 1 / 3 / 11",
+            display: "flex",
+            alignItems: "center",
+            visibility: "hidden",
+          }}
+          ref={(el) => (title = el)}
+        >
           <h1
-            ref={(el) => (title = el)}
             sx={{
-              visibility: "hidden",
               margin: 0,
               padding: 0,
               fontWeight: 600,
               textTransform: "uppercase",
-              fontSize: "1.5rem",
+              fontSize: "2rem",
             }}
           >
             {project.title}
           </h1>
+          <div
+            sx={{ border: "0.5px dashed blue", width: "30%", ml: "2rem" }}
+          ></div>
         </div>
-
         <div
           ref={(el) => (image = el)}
           sx={{
@@ -80,39 +87,73 @@ export default function ProjectCardItem(props) {
             <img
               src={project.image}
               alt="Catalog Website Preview"
-              sx={{ width: "100%" }}
+              sx={{
+                width: "100%",
+                border: "2px solid #DDD",
+                boxShadow: "0px 2px 5px 2px #BBB",
+              }}
             ></img>
           )}
         </div>
         <div
           ref={(el) => (description = el)}
-          sx={{
-            gridArea: alt ? "4 / 6 / 8 / 11" : "4 / 1 / 8 / 6",
-            textAlign: "justify",
-            fontSize: "1.2rem",
-            backgroundColor: "blue",
-            padding: "0.5rem",
-          }}
+          sx={{ gridArea: alt ? "4 / 6 / 8 / 11" : "4 / 1 / 8 / 6" }}
         >
-          {project.description}
+          <p
+            sx={{
+              m: 0,
+              p: 1,
+              fontWeight: 300,
+              backgroundColor: "primary",
+              color: "white",
+              textAlign: "justify",
+              fontSize: "1.2rem",
+              border: "0.5px solid #EEE",
+              boxShadow: "0px 2px 5px 2px #BBB",
+            }}
+          >
+            {project.description}
+          </p>
         </div>
         <div
           ref={(el) => (tech = el)}
           sx={{
-            gridArea: alt ? "8 / 7 / 9 / 11" : "8 / 1 / 9 / 5",
+            gridArea: alt ? "3 / 7 / 4 / 11" : "3 / 1 / 4 / 5",
             display: "flex",
-            justifyContent: "space-evenly",
             alignItems: "center",
+            fontFamily: "secondary",
+            fontSize: "0.8rem",
+            // color: "secondary",
           }}
         >
           {project.techStack.map((tech, index) => {
             return (
-              <span key={tech}>
+              <span key={tech} sx={{ pr: "0.5rem" }}>
                 {tech}
-                {index !== project.techStack.length - 1 && ", "}
+                {index !== project.techStack.length - 1 && ","}
               </span>
             );
           })}
+        </div>
+        <div
+          sx={{
+            display: "flex",
+            justifyContent: "flex-end",
+            alignItems: "center",
+            gridArea: alt ? "9 / 7 / 10 / 11" : "9 / 6 / 10 / 11",
+          }}
+        >
+          <div
+            sx={{ border: "0.5px dashed blue", width: "100%", ml: "2rem" }}
+          ></div>
+          <div>
+            <a href="#" sx={{ pl: "0.5rem" }}>
+              WebLink
+            </a>
+            <a href="#" sx={{ pl: "0.5rem" }}>
+              GitLink
+            </a>
+          </div>
         </div>
       </div>
     </div>

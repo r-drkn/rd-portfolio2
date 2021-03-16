@@ -33,7 +33,6 @@ export default function Landing(props) {
         flexDirection: "column",
         fontFamily: "main",
         letterSpacing: "2px",
-        color: "#333",
         padding: "2rem",
       }}
     >

@@ -25,7 +25,7 @@ export default function Projects() {
       title: "Recipe Book Hackathon",
       description:
         "Three day Hackathon where my partner and I built a user uploaded recipe database accessible via a global map. The idea was for a product where the geographic locality of recipes could be centralized and users could upload their local dishes",
-      techStack: ["Javascript", "HTML/SCSS", "Mapbox", "Recipe API's"],
+      techStack: ["Javascript", "HTML/SCSS", "Mapbox"],
       image: "",
     },
     {
@@ -41,7 +41,7 @@ export default function Projects() {
       techStack: ["Ruby", "Rails", "Tailwind CSS"],
     },
     {
-      title: "Butterfly Budgeting Terminal App",
+      title: "Butterfly Budgeting",
       description:
         "A cute little project built in Ruby for Terminal. The app uses user entered data to create a personal budget with a breakdown of savings targets.",
       techStack: ["Ruby", "Command Line"],

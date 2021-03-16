@@ -4,8 +4,9 @@ import { ThemeProvider } from "theme-ui";
 import Landing from "./pages/Landing/Landing";
 import Nav from "./components/Nav";
 import Projects from "./pages/Projects/Projects";
-import About from "./pages/About";
+import About from "./pages/About/About";
 import MainContainer from "./components/MainContainer";
+import Contact from "./pages/Contact/Contact";
 
 function App() {
   return (
@@ -14,8 +15,9 @@ function App() {
         <Nav />
         <MainContainer>
           <Landing />
-          <Projects />
           <About />
+          <Projects />
+          <Contact />
         </MainContainer>
       </ThemeProvider>
     </div>

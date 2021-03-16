@@ -2,7 +2,6 @@
 /** @jsx jsx */
 import React from "react";
 import { jsx } from "theme-ui";
-import { NavLink } from "react-router-dom";
 
 const NavItem = (props) => {
   const { item } = props;
@@ -12,17 +11,15 @@ const NavItem = (props) => {
         href={`/#${item}`}
         sx={{
           color: "text",
-          cursor: "pointer",
-          paddingLeft: "1rem",
-          margin: "0.5rem",
-          backgroundColor: "none",
+          m: "0.5rem 0.5rem",
+          // ml: "1rem",
           ":hover": {
-            backgroundColor: "#333",
+            backgroundColor: "blue",
             color: "#EEE",
           },
         }}
       >
-        {item.toUpperCase()}{" "}
+        {item.toUpperCase()}
       </a>
     </li>
   );
@@ -44,12 +41,11 @@ export default function Nav() {
           width: "100%",
           maxWidth: "1280px",
           mx: "auto",
-          px: "1rem",
-          py: "0.5rem",
+          p: "0.5rem 1rem",
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
-          backgroundColor: "rgba(220, 220, 220, 0.7)",
+          // backgroundColor: "rgba(220, 220, 220, 0.7)",
         }}
       >
         <div
