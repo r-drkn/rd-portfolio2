@@ -14,9 +14,12 @@ export default function About() {
         sx={{
           width: "100%",
           border: "2px solid #333",
-          height: "",
+          height: "50vh",
+          p: "2rem",
         }}
-      ></div>
+      ><h2>Interests:</h2>
+      <h2>Tech Skill:</h2>
+      <h2>Interests:</h2></div>
     </div>
   );
 }

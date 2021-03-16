@@ -10,6 +10,9 @@ const theme = {
     main: "Barlow, sans-serif",
     secondary: "Fira Code, serif",
   },
+  styles: {
+    body: { overflowX: "hidden" },
+  },
 };
 
 export default theme;

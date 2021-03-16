@@ -33,7 +33,7 @@ export default function Landing(props) {
         flexDirection: "column",
         fontFamily: "main",
         letterSpacing: "2px",
-        padding: "2rem",
+        pb: "2rem",
       }}
     >
       <h1
@@ -42,7 +42,7 @@ export default function Landing(props) {
         sx={{
           visibility: "hidden",
           fontSize: "4rem",
-          gridArea: "2 / 2 / 4 / 9",
+          gridArea: "2 / 1 / 4 / 9",
           padding: 0,
           margin: 0,
           display: "flex",
@@ -101,7 +101,7 @@ export default function Landing(props) {
           fontSize: "2.5rem",
           padding: 0,
           margin: 0,
-          gridArea: "4/ 2 / 5 / 11",
+          gridArea: "4/ 1 / 5 / 11",
           fontWeight: "600",
         }}
       >
@@ -119,7 +119,7 @@ export default function Landing(props) {
         ref={(el) => (description = el)}
         sx={{
           visibility: "hidden",
-          gridArea: "5 / 2 / 8 / 10 ",
+          gridArea: "5 / 1 / 8 / 9 ",
           fontSize: "1.2rem",
           textAlign: "justify",
         }}

@@ -42,6 +42,7 @@ export default function ProjectCardItem(props) {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
+        overflow: "hidden",
       }}
     >
       <div
@@ -50,7 +51,6 @@ export default function ProjectCardItem(props) {
           width: "100%",
           display: "grid",
           gridTemplate: "repeat(10,2.5rem) / repeat(10,5rem)",
-          padding: "2rem",
         }}
       >
         <div
