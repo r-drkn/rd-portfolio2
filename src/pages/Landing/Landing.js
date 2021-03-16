@@ -31,7 +31,7 @@ export default function Landing(props) {
         display: "grid",
         gridTemplate: "repeat(9, 1fr) / repeat(16, 1fr)",
         flexDirection: "column",
-        fontFamily: "main",
+        fontFamily: "primary",
         letterSpacing: "2px",
         pb: "2rem",
       }}
@@ -129,7 +129,7 @@ export default function Landing(props) {
           applications with a particular interest in front end development.
         </p>
       </div>
-      {/* <LookingForWork gridArea="6 / 13 / 8 / 16 " /> */}
+      <LookingForWork gridArea="6 / 13 / 8 / 16 " />
     </div>
   );
 }

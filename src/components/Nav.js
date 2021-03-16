@@ -29,7 +29,7 @@ export default function Nav() {
   return (
     <nav
       sx={{
-        fontFamily: "main",
+        fontFamily: "secondary",
         width: "100%",
         display: "flex",
         position: "fixed",

@@ -4,7 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 export let projectsAnimate = {
-  title: {
+  natural: {
     scrollTrigger: {
       trigger: ".project",
       scrub: 2,
@@ -17,7 +17,7 @@ export let projectsAnimate = {
     autoAlpha: 0,
     ease: "ease",
   },
-  altTitle: {
+  alt: {
     scrollTrigger: {
       trigger: ".project",
       scrub: 2,

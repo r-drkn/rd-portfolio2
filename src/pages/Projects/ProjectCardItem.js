@@ -15,9 +15,9 @@ export default function ProjectCardItem(props) {
 
   useEffect(() => {
     // give each item unique trigger from classname
-    projectsAnimate.title.scrollTrigger.trigger =
+    projectsAnimate.natural.scrollTrigger.trigger =
       "." + project.title.replace(/\s+/g, "");
-    projectsAnimate.altTitle.scrollTrigger.trigger =
+    projectsAnimate.alt.scrollTrigger.trigger =
       "." + project.title.replace(/\s+/g, "");
 
     title.style.visibility = "visible";
@@ -26,12 +26,12 @@ export default function ProjectCardItem(props) {
     tl.current
       .from(
         title,
-        alt ? projectsAnimate.altTitle : projectsAnimate.title,
+        alt ? projectsAnimate.alt : projectsAnimate.natural,
         "forwards"
       )
-      .from(image, alt ? projectsAnimate.altTitle : projectsAnimate.title)
-      .from(description, alt ? projectsAnimate.title : projectsAnimate.altTitle)
-      .from(tech, alt ? projectsAnimate.title : projectsAnimate.altTitle);
+      .from(image, alt ? projectsAnimate.alt : projectsAnimate.natural)
+      .from(description, alt ? projectsAnimate.natural : projectsAnimate.alt)
+      .from(tech, alt ? projectsAnimate.natural : projectsAnimate.alt);
   }, [project.title, alt]);
 
   return (
@@ -39,23 +39,26 @@ export default function ProjectCardItem(props) {
       className={project.title.replace(/\s+/g, "")}
       sx={{
         height: "75vh",
+        width: "100%",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
         overflow: "hidden",
+        my: "3rem",
+        p: "1rem",
       }}
     >
       <div
         sx={{
-          fontFamily: "main",
+          fontFamily: "primary",
           width: "100%",
           display: "grid",
-          gridTemplate: "repeat(10,2.5rem) / repeat(10,5rem)",
+          gridTemplate: "repeat(10,2.5rem) / repeat(10,1fr)",
         }}
       >
         <div
           sx={{
-            gridArea: "2 / 1 / 3 / 11",
+            gridArea: "1 / 1 / 2 / 11",
             display: "flex",
             alignItems: "center",
             visibility: "hidden",
@@ -80,7 +83,8 @@ export default function ProjectCardItem(props) {
         <div
           ref={(el) => (image = el)}
           sx={{
-            gridArea: alt ? "3 / 1 / 11 / 7" : "3 / 5 / 11 / 11",
+            gridArea: alt ? "2 / 1 / 11 / 7" : "2 / 5 / 10 / 12",
+            px: "1rem",
           }}
         >
           {project.image && (
@@ -88,7 +92,9 @@ export default function ProjectCardItem(props) {
               src={project.image}
               alt="Catalog Website Preview"
               sx={{
+                boxSizing: "border-box",
                 width: "100%",
+                height: "100%",
                 border: "2px solid #DDD",
                 boxShadow: "0px 2px 5px 2px #BBB",
               }}
@@ -140,7 +146,7 @@ export default function ProjectCardItem(props) {
             display: "flex",
             justifyContent: "flex-end",
             alignItems: "center",
-            gridArea: alt ? "9 / 7 / 10 / 11" : "9 / 6 / 10 / 11",
+            gridArea: alt ? "11 / 7 / 12 / 11" : "10 / 6 / 11 / 11",
           }}
         >
           <div

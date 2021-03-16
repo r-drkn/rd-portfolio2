@@ -7,11 +7,11 @@ const theme = {
     background: "#F2F2F2",
   },
   fonts: {
-    main: "Barlow, sans-serif",
+    primary: "Barlow, sans-serif",
     secondary: "Fira Code, serif",
   },
   styles: {
-    body: { overflowX: "hidden" },
+    root: { boxSizing: "border-box", overflowX: "hidden" },
   },
 };
 
