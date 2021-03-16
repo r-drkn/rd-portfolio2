@@ -36,6 +36,7 @@ export default function Nav() {
         width: "100%",
         display: "flex",
         position: "fixed",
+        zIndex: "9999",
       }}
     >
       <div

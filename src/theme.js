@@ -1,9 +1,9 @@
 const theme = {
   colors: {
     text: "#333",
-    blue: "#3AA9E0",
-    yellow: "#E0C990",
-    background: "#EEE",
+    blue: "#A7DBDB",
+    yellow: "#DBCF91",
+    background: "#DBCF91",
   },
   fonts: {
     main: "Barlow, sans-serif",

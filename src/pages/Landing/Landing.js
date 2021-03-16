@@ -53,7 +53,7 @@ export default function Landing(props) {
       >
         Hi, I'm Rob.
       </h1>
-      <div
+      {/* <div
         sx={{
           gridArea: "3 / 8/ 5 / 14",
           display: "flex",
@@ -94,7 +94,7 @@ export default function Landing(props) {
             strokeLinecap="round"
           />
         </svg>
-      </div>
+      </div> */}
       <h2
         ref={(el) => (byline = el)}
         sx={{
@@ -109,29 +109,28 @@ export default function Landing(props) {
         <span sx={{ fontSize: "3rem" }}>I make things</span> <br />
         on the internet.
       </h2>
-      <div
+      {/* <div
         sx={{
           gridArea: "3 / 13 / 5 / 16",
         }}
       >
         <img src={Selfie} alt="Rob" sx={{ width: "100%" }} />
-      </div>
+      </div> */}
       <div
-        s
+        ref={(el) => (description = el)}
         sx={{
           visibility: "hidden",
           gridArea: "5 / 2 / 8 / 10 ",
           fontSize: "1.2rem",
           textAlign: "justify",
-          margin: "auto",
         }}
       >
-        <p ref={(el) => (description = el)}>
+        <p>
           I'm a Junior Developer living in Brisbane specializing in MERN based
           applications with a particular interest in front end development.
         </p>
       </div>
-      <LookingForWork gridArea="6 / 13 / 8 / 16 " />
+      {/* <LookingForWork gridArea="6 / 13 / 8 / 16 " /> */}
     </div>
   );
 }
