@@ -50,6 +50,7 @@ export default function Projects() {
 
   return (
     <div id="projects" sx={{ paddingTop: "10vh" }}>
+      <h1 sx={{ pl: "1rem" }}>PROJECTS</h1>
       {projects.map((project, index) => {
         const alt = (index + 1) % 2 === 0;
 

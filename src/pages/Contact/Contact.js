@@ -5,7 +5,8 @@ import { jsx } from "theme-ui";
 
 export default function Contact() {
   return (
-    <div sx={{ height: "100vh", pt: "10vh" }}>
+    <div id="contact" sx={{ height: "100vh", pt: "10vh", px: "1rem" }}>
+      <h1>CONTACT</h1>
       <form
         sx={{
           p: "2rem",
@@ -31,9 +32,9 @@ export default function Contact() {
           Email:
           <input type="email" name="email"></input>
         </label>
-        <label for="message">
+        <label for="message" sx={{ display: "flex" }}>
           Message:
-          <input type="text-area" name="message"></input>
+          <textarea name="message" rows="5"></textarea>
         </label>
         <label for="submit">
           <input type="submit" name="submit" value="Send"></input>

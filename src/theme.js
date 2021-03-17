@@ -11,7 +11,11 @@ const theme = {
     secondary: "Fira Code, serif",
   },
   styles: {
-    root: { boxSizing: "border-box", overflowX: "hidden" },
+    root: {
+      boxSizing: "border-box",
+      overflowX: "hidden",
+      fontFamily: "Barlow, sans-serif",
+    },
   },
 };
 

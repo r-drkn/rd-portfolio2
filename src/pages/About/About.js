@@ -13,7 +13,6 @@ export default function About() {
       <div
         sx={{
           width: "100%",
-          border: "2px solid #333",
           pl: "2rem",
           fontSize: "1.5rem",
         }}
@@ -31,7 +30,8 @@ export default function About() {
         </p>
         <p>
           Tech I’ve worked with includes: <br />
-          React, Node, express, Mongo, SQL,
+          React, Node, Express, MongoDB, SQL, Ruby/Rails, GSAP, TailwindCSS,
+          MaterialUI, ThemeUI,
         </p>
         <p>
           Tech I’m actively incorporating into my skill set: <br />

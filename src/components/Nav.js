@@ -1,10 +1,10 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import React from "react";
+import React, { useState } from "react";
 import { jsx } from "theme-ui";
 
 const NavItem = (props) => {
-  const { item } = props;
+  const { item, current, setCurrent } = props;
   return (
     <li>
       <a
@@ -12,12 +12,15 @@ const NavItem = (props) => {
         sx={{
           color: "text",
           m: "0.5rem 0.5rem",
-          // ml: "1rem",
+          padding: "1rem",
+          backgroundColor: current === item && "secondary",
+          color: current === item && "blue",
           ":hover": {
             backgroundColor: "blue",
             color: "#EEE",
           },
         }}
+        onClick={() => setCurrent(item)}
       >
         {item.toUpperCase()}
       </a>
@@ -26,6 +29,7 @@ const NavItem = (props) => {
 };
 
 export default function Nav() {
+  const [current, setCurrent] = useState();
   return (
     <nav
       sx={{
@@ -66,9 +70,9 @@ export default function Nav() {
             backgroundColor: "none",
           }}
         >
-          <NavItem item="about" />
-          <NavItem item="projects" />
-          <NavItem item="contact" />
+          <NavItem item="about" current={current} setCurrent={setCurrent} />
+          <NavItem item="projects" current={current} setCurrent={setCurrent} />
+          <NavItem item="contact" current={current} setCurrent={setCurrent} />
         </ul>
       </div>
     </nav>
