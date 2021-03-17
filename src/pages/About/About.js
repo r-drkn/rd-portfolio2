@@ -14,13 +14,34 @@ export default function About() {
         sx={{
           width: "100%",
           border: "2px solid #333",
-          height: "50vh",
           pl: "2rem",
+          fontSize: "1.5rem",
         }}
       >
-        <h2>Bio:</h2>
-        <h2>Interests:</h2>
-        <h2>Tech Skill:</h2>
+        <p>
+          I’m interested in balancing the myriad opportunities of web user
+          interface creativity with the importance of building functional and
+          accessible experiences.
+        </p>
+        <p>
+          I’m currently in the process of building out my portfolio with small
+          jobs and personal projects. My goal throughout this is to not only
+          showcase my current skills but to learn new skills while strengthening
+          any weaknesses.
+        </p>
+        <p>
+          Tech I’ve worked with includes: <br />
+          React, Node, express, Mongo, SQL,
+        </p>
+        <p>
+          Tech I’m actively incorporating into my skill set: <br />
+          Next.JS, Typescript, A11y
+        </p>
+        <p>
+          When I’m away from the keyboard I enjoy cooking elaborate meals for
+          friends, electronic music and watching the Chicago Bulls fail to meet
+          my expectations despite years of my love and devotion.
+        </p>
       </div>
     </div>
   );

@@ -72,7 +72,7 @@ export default function ProjectCardItem(props) {
               fontWeight: 600,
               textTransform: "uppercase",
               fontSize: "2rem",
-              letterSpacing: "3px",
+              letterSpacing: "2px",
             }}
           >
             {project.title}
