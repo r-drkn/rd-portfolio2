@@ -25,7 +25,7 @@ export default function Projects() {
       title: "Recipe Book Hackathon",
       description:
         "Three day Hackathon where my partner and I built a user uploaded recipe database accessible via a global map. The idea was for a product where the geographic locality of recipes could be centralized and users could upload their local dishes",
-      techStack: ["Javascript", "HTML/SCSS", "Mapbox"],
+      techStack: ["Javascript", "Node.js", "Handlebars", "Mapbox"],
       image: "",
     },
     {

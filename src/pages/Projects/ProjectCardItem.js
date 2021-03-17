@@ -72,6 +72,7 @@ export default function ProjectCardItem(props) {
               fontWeight: 600,
               textTransform: "uppercase",
               fontSize: "2rem",
+              letterSpacing: "3px",
             }}
           >
             {project.title}
@@ -108,7 +109,7 @@ export default function ProjectCardItem(props) {
           <p
             sx={{
               m: 0,
-              p: 1,
+              p: "1rem",
               fontWeight: 300,
               backgroundColor: "primary",
               color: "white",

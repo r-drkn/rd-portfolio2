@@ -33,6 +33,7 @@ export default function Landing(props) {
         flexDirection: "column",
         fontFamily: "primary",
         letterSpacing: "2px",
+        p: "1rem",
         pb: "2rem",
       }}
     >
