@@ -19,13 +19,12 @@ export default function PageHeading(props) {
     tl.current.to(heading, {
       scrollTrigger: {
         trigger: heading,
-        start: "-=50% 50%",
+        start: "start 50%",
         end: "+=150px 50%",
         scrub: true,
         markers: true,
-        once: true,
       },
-      backgroundImage: `linear-gradient(0deg, ${background} -100%, ${text} 50%, ${background} 100%)`,
+      backgroundImage: `linear-gradient(0deg, ${background} -200%, ${text} 100%, ${background} 100%)`,
       ease: "none",
       duration: 5,
       autoAlpha: 1,
