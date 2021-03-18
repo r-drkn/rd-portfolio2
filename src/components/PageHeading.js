@@ -21,7 +21,6 @@ export default function PageHeading(props) {
         start: "start 50%",
         end: "bottom 50%",
         scrub: true,
-        markers: true,
       },
       backgroundImage: `linear-gradient(45deg, ${background} -20%, ${text} 50%, ${background} 100%)`,
       ease: "none",
@@ -40,7 +39,6 @@ export default function PageHeading(props) {
           textFillColor: "transparent",
           WebkitBackgroundClip: "text",
           WebkitTextFillColor: "transparent",
-          border: "2px solid red",
         }}
       >
         {pageTitle}

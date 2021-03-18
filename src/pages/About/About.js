@@ -1,16 +1,36 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { jsx } from "theme-ui";
 import PageHeading from "../../components/PageHeading";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 export default function About() {
+  let aboutHeader = useRef(null);
+
+  useEffect(() => {
+    gsap.from(document.querySelectorAll("p"), {
+      scrollTrigger: {
+        trigger: aboutHeader,
+        start: "bottom 50%",
+      },
+      duration: 1,
+      autoAlpha: 0,
+      y: 50,
+      stagger: 0.2,
+    });
+  }, []);
+
   return (
     <div
       id="about"
       sx={{ fontFamily: "primary", height: "100vh", p: "1rem", pt: "10vh" }}
     >
-      <PageHeading pageTitle="ABOUT" />
+      <div ref={(el) => (aboutHeader = el)}>
+        <PageHeading pageTitle="ABOUT" />
+      </div>
       <div
         sx={{
           width: "100%",

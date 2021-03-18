@@ -14,7 +14,7 @@ export default function ProjectCardItem(props) {
   let tech = useRef(null);
 
   useEffect(() => {
-    // give each item unique trigger from classname
+    // remove spaces to give each item unique trigger from classname
     projectsAnimate.natural.scrollTrigger.trigger =
       "." + project.title.replace(/\s+/g, "");
     projectsAnimate.alt.scrollTrigger.trigger =
