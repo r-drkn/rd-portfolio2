@@ -10,11 +10,10 @@ const NavItem = (props) => {
       <a
         href={`/#${item}`}
         sx={{
-          color: "text",
           m: "0.5rem 0.5rem",
-          padding: "1rem",
+          p: "0.5rem 1rem",
           backgroundColor: current === item && "secondary",
-          color: current === item && "blue",
+          color: current === item ? "white" : "text",
           ":hover": {
             backgroundColor: "blue",
             color: "#EEE",

@@ -2,11 +2,12 @@
 /** @jsx jsx */
 import React from "react";
 import { jsx } from "theme-ui";
+import PageHeading from "../../components/PageHeading";
 
 export default function Contact() {
   return (
     <div id="contact" sx={{ height: "100vh", pt: "10vh", px: "1rem" }}>
-      <h1>CONTACT</h1>
+      <PageHeading pageTitle="CONTACT" />
       <form
         sx={{
           p: "2rem",

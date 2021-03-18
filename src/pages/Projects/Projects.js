@@ -4,6 +4,7 @@ import React from "react";
 import { jsx } from "theme-ui";
 import ProjectCardItem from "./ProjectCardItem";
 import catalogWebsite from "../../images/catalog-website.png";
+import PageHeading from "../../components/PageHeading";
 
 export default function Projects() {
   const projects = [
@@ -50,7 +51,7 @@ export default function Projects() {
 
   return (
     <div id="projects" sx={{ paddingTop: "10vh" }}>
-      <h1 sx={{ pl: "1rem" }}>PROJECTS</h1>
+      <PageHeading pageTitle="PROJECTS" />
       {projects.map((project, index) => {
         const alt = (index + 1) % 2 === 0;
 
