@@ -15,38 +15,32 @@ export default function PageHeading(props) {
   const { text, background } = theme.colors;
 
   useEffect(() => {
-    heading.style.visibility = "visible";
     tl.current.to(heading, {
       scrollTrigger: {
         trigger: heading,
         start: "start 50%",
-        end: "+=150px 50%",
+        end: "bottom 50%",
         scrub: true,
         markers: true,
       },
-      backgroundImage: `linear-gradient(0deg, ${background} -200%, ${text} 100%, ${background} 100%)`,
+      backgroundImage: `linear-gradient(45deg, ${background} -20%, ${text} 50%, ${background} 100%)`,
       ease: "none",
-      duration: 5,
-      autoAlpha: 1,
+      duration: 1,
     });
   }, [background, text]);
 
   return (
-    <div>
+    <div sx={{ display: "flex" }}>
       <h1
         ref={(el) => (heading = el)}
         sx={{
-          visibility: "hidden",
-          width: "100%",
-          display: "flex",
-          justifyContent: "center",
           fontSize: "5rem",
-          letterSpacing: "2rem",
           backgroundImage: `linear-gradient(45deg, ${background} -200%, ${text} -100%, ${background} 0%)`,
           backgroundClip: "text",
           textFillColor: "transparent",
           WebkitBackgroundClip: "text",
           WebkitTextFillColor: "transparent",
+          border: "2px solid red",
         }}
       >
         {pageTitle}
