@@ -85,7 +85,7 @@ export default function Landing(props) {
           alignItems: "center",
         }}
       >
-        <p sx={{ border: `4px solid ${primary}`, padding: "1rem", m: 0 }}>
+        <p sx={{ padding: "1rem", m: 0 }}>
           I'm a Junior Developer living in Brisbane specializing in MERN based
           applications with a particular interest in front end development.
         </p>

@@ -8,7 +8,7 @@ export default function Contact() {
   return (
     <div id="contact" sx={{ height: "100vh", pt: "10vh", px: "1rem" }}>
       <PageHeading pageTitle="Contact" />
-      <div sx={{ display: "flex", width:"100%" }}>
+      <div sx={{ display: "flex", width: "100%" }}>
         <form
           sx={{
             p: "2rem",
@@ -18,7 +18,7 @@ export default function Contact() {
             fontSize: "1.5rem",
             fontFamily: "secondary",
             label: {
-              p: "2rem",
+              p: "1rem",
               pl: "0rem",
             },
             input: {
@@ -46,9 +46,7 @@ export default function Contact() {
             <input type="submit" name="submit" value="Send"></input>
           </label>
         </form>
-        <div sx={{border:"2px solid red", width:"50%"}}>
-          
-        </div>
+        <div sx={{ width: "50%" }}></div>
       </div>
     </div>
   );
