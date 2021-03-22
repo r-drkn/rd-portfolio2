@@ -39,6 +39,7 @@ export default function PageHeading(props) {
           fontWeight: 400,
           letterSpacing: "3px",
           pl: "0.5rem",
+          color: "secondary",
           m: 0,
         }}
       >

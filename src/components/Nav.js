@@ -1,27 +1,37 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { jsx } from "theme-ui";
 import theme from "../theme.js";
+import gsap from "gsap";
 
 const NavItem = (props) => {
   const { item, current, setCurrent } = props;
   const { primary, secondary } = theme;
+  let domElement = useRef(null);
+
   return (
     <li>
       <a
-        href={`/#${item}`}
+        ref={(el) => (domElement = el)}
+        href={`/#${item === "home" ? "" : item}`}
         sx={{
-          m: "0.5rem 0.5rem",
-          p: "0.5rem 1rem",
-          backgroundColor: current === item && "primary",
-          color: current === item ? "white" : "text",
-          ":hover": {
-            backgroundColor: "primary",
-            color: "#EEE",
-          },
+          display: "block",
+          m: "0.5rem 1rem",
+          textDecoration: "none",
+          color: "text",
         }}
         onClick={() => setCurrent(item)}
+        onMouseOver={() => {
+          gsap.to(
+            ".line",
+            {
+              x: domElement.offsetLeft,
+              width: domElement.clientWidth,
+            },
+            console.log(domElement.clientWidth)
+          );
+        }}
       >
         {item.toUpperCase()}
       </a>
@@ -31,6 +41,9 @@ const NavItem = (props) => {
 
 export default function Nav() {
   const [current, setCurrent] = useState();
+  const { primary } = theme.colors;
+  const navItems = ["home", "about", "projects", "contact"];
+
   return (
     <nav
       sx={{
@@ -39,6 +52,7 @@ export default function Nav() {
         display: "flex",
         position: "fixed",
         zIndex: "9999",
+        p: "1rem",
       }}
     >
       <div
@@ -61,20 +75,37 @@ export default function Nav() {
         >
           RB:DK
         </div>
-        <ul
-          sx={{
-            listStyle: "none",
-            letterSpacing: "4px",
-            textAlign: "right",
-            color: "text",
-            display: "flex",
-            backgroundColor: "none",
-          }}
-        >
-          <NavItem item="about" current={current} setCurrent={setCurrent} />
-          <NavItem item="projects" current={current} setCurrent={setCurrent} />
-          <NavItem item="contact" current={current} setCurrent={setCurrent} />
-        </ul>
+        <div>
+          <ul
+            sx={{
+              m: 0,
+              p: 0,
+              listStyle: "none",
+              letterSpacing: "4px",
+              color: "text",
+              display: "flex",
+              position: "relative",
+            }}
+          >
+            {navItems.map((navItem) => {
+              return (
+                <NavItem
+                  item={navItem}
+                  current={current}
+                  setCurrent={setCurrent}
+                  key={navItem}
+                />
+              );
+            })}
+          </ul>
+          <div
+            className="line"
+            sx={{
+              width: "20px",
+              border: `2px solid ${primary}`,
+            }}
+          ></div>
+        </div>
       </div>
     </nav>
   );
