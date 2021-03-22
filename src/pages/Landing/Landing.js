@@ -6,12 +6,15 @@ import Selfie from "../../images/selfie-test.JPG";
 import LookingForWork from "../../components/LookingForWork";
 import { landingAnimate } from "./landingAnimate.js";
 import gsap from "gsap";
+import rob from "../../images/rob.svg";
+import theme from "../../theme.js";
 
 export default function Landing(props) {
   let heading = useRef(null);
   let byline = useRef(null);
   let description = useRef(null);
   let tl = useRef(gsap.timeline());
+  const { primary } = theme.colors;
 
   useEffect(() => {
     heading.style.visibility = "visible";
@@ -42,95 +45,53 @@ export default function Landing(props) {
         ref={(el) => (heading = el)}
         sx={{
           visibility: "hidden",
-          fontSize: "4rem",
+          fontSize: "5rem",
           gridArea: "2 / 1 / 4 / 9",
           padding: 0,
           margin: 0,
           display: "flex",
           alignItems: "center",
-          fontWeight: "600",
+          fontWeight: "400",
         }}
       >
-        Hi, I'm Rob.
+        HI, I'M ROB.
       </h1>
-      {/* <div
-        sx={{
-          gridArea: "3 / 8/ 5 / 14",
-          display: "flex",
-          justifyCenter: "center",
-          alignItems: "center",
-          padding: "2.5rem",
-        }}
-      >
-        <svg
-          viewBox="0 0 152 35"
-          width="80%"
-          height="100%"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          sx={{
-            path: {
-              strokeDasharray: "163",
-              strokeDashoffset: "-163",
-              animation: "dash 1.5s linear forwards",
-            },
-            "@keyframes dash": {
-              to: {
-                strokeDashoffset: "0",
-              },
-            },
-          }}
-        >
-          <path
-            d="M136 17h-7c-9 0-12 8-18 0-7-8-13-8-19 0s-12 8-18 0-12-8-18 0-12 8-18 0-12-8-18 0-12 8-18 0"
-            stroke="#4C75F2"
-            strokeWidth="7"
-            strokeLinecap="round"
-          />
-          <path
-            d="M133 3l15 15-15 14"
-            stroke="#4C75F2"
-            strokeWidth="7"
-            strokeLinecap="round"
-          />
-        </svg>
-      </div> */}
       <h2
         ref={(el) => (byline = el)}
         sx={{
           visibility: "hidden",
           fontSize: "2.5rem",
           padding: 0,
-          margin: 0,
-          gridArea: "4/ 1 / 5 / 11",
+          gridArea: "4/ 1 / 6 / 11",
           fontWeight: "600",
+          display: "flex",
+          justifyContent: "center",
+          flexDirection: "column",
         }}
       >
         <span sx={{ fontSize: "3rem" }}>I make things</span> <br />
         on the internet.
       </h2>
-      {/* <div
-        sx={{
-          gridArea: "3 / 13 / 5 / 16",
-        }}
-      >
-        <img src={Selfie} alt="Rob" sx={{ width: "100%" }} />
-      </div> */}
+
       <div
         ref={(el) => (description = el)}
         sx={{
           visibility: "hidden",
-          gridArea: "5 / 1 / 8 / 9 ",
+          gridArea: "6 / 1 / 8 / 9 ",
           fontSize: "1.2rem",
           textAlign: "justify",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
         }}
       >
-        <p>
+        <p sx={{ border: `4px solid ${primary}`, padding: "1rem", m: 0 }}>
           I'm a Junior Developer living in Brisbane specializing in MERN based
           applications with a particular interest in front end development.
         </p>
       </div>
-      <LookingForWork gridArea="6 / 13 / 8 / 16 " />
+      <div sx={{ gridArea: "1 / 10 / 10 / 16 " }}></div>
+      {/* <LookingForWork gridArea="6 / 13 / 8 / 16 " /> */}
     </div>
   );
 }

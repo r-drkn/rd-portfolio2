@@ -2,9 +2,11 @@
 /** @jsx jsx */
 import React, { useState } from "react";
 import { jsx } from "theme-ui";
+import theme from "../theme.js";
 
 const NavItem = (props) => {
   const { item, current, setCurrent } = props;
+  const { primary, secondary } = theme;
   return (
     <li>
       <a
@@ -12,10 +14,10 @@ const NavItem = (props) => {
         sx={{
           m: "0.5rem 0.5rem",
           p: "0.5rem 1rem",
-          backgroundColor: current === item && "secondary",
+          backgroundColor: current === item && "primary",
           color: current === item ? "white" : "text",
           ":hover": {
-            backgroundColor: "blue",
+            backgroundColor: "primary",
             color: "#EEE",
           },
         }}

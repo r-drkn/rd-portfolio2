@@ -1,9 +1,11 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { jsx } from "theme-ui";
 import { projectsAnimate } from "./projectsAnimate.js";
 import gsap from "gsap";
+import theme from "../../theme";
+import rob from "../../images/rob.svg";
 
 export default function ProjectCardItem(props) {
   const { project, alt } = props;
@@ -12,6 +14,9 @@ export default function ProjectCardItem(props) {
   let image = useRef(null);
   let description = useRef(null);
   let tech = useRef(null);
+  let { primary, white } = theme.colors;
+  const { projectsReady } = props;
+  console.log(projectsReady);
 
   useEffect(() => {
     // remove spaces to give each item unique trigger from classname
@@ -32,7 +37,7 @@ export default function ProjectCardItem(props) {
       .from(image, alt ? projectsAnimate.alt : projectsAnimate.natural)
       .from(description, alt ? projectsAnimate.natural : projectsAnimate.alt)
       .from(tech, alt ? projectsAnimate.natural : projectsAnimate.alt);
-  }, [project.title, alt]);
+  }, [project.title, alt, projectsReady]);
 
   return (
     <div
@@ -78,7 +83,7 @@ export default function ProjectCardItem(props) {
             {project.title}
           </h1>
           <div
-            sx={{ border: "0.5px dashed blue", width: "30%", ml: "2rem" }}
+            sx={{ border: `0.5px dashed ${white}`, width: "30%", ml: "2rem" }}
           ></div>
         </div>
         <div
@@ -96,8 +101,7 @@ export default function ProjectCardItem(props) {
                 boxSizing: "border-box",
                 width: "100%",
                 height: "100%",
-                border: "2px solid #DDD",
-                boxShadow: "0px 2px 5px 2px #BBB",
+                // boxShadow: "0px 2px 5px 2px #BBB",
               }}
             ></img>
           )}
@@ -115,8 +119,8 @@ export default function ProjectCardItem(props) {
               color: "white",
               textAlign: "justify",
               fontSize: "1.2rem",
-              border: "0.5px solid #EEE",
-              boxShadow: "0px 2px 5px 2px #BBB",
+              // border: "0.5px solid #EEE",
+              // boxShadow: "0px 2px 5px 2px #BBB",
             }}
           >
             {project.description}
@@ -130,7 +134,6 @@ export default function ProjectCardItem(props) {
             alignItems: "center",
             fontFamily: "secondary",
             fontSize: "0.8rem",
-            // color: "secondary",
           }}
         >
           {project.techStack.map((tech, index) => {
@@ -151,13 +154,17 @@ export default function ProjectCardItem(props) {
           }}
         >
           <div
-            sx={{ border: "0.5px dashed blue", width: "100%", ml: "2rem" }}
+            sx={{
+              border: `0.5px dashed ${white}`,
+              width: "100%",
+              ml: "2rem",
+            }}
           ></div>
           <div>
-            <a href="#" sx={{ pl: "0.5rem" }}>
+            <a href="#" sx={{ pl: "0.5rem", color: "text" }}>
               WebLink
             </a>
-            <a href="#" sx={{ pl: "0.5rem" }}>
+            <a href="#" sx={{ pl: "0.5rem", color: "text" }}>
               GitLink
             </a>
           </div>

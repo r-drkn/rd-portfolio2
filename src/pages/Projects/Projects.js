@@ -1,6 +1,6 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import React from "react";
+import React, { useState } from "react";
 import { jsx } from "theme-ui";
 import ProjectCardItem from "./ProjectCardItem";
 import catalogWebsite from "../../images/catalog-website.png";
@@ -51,7 +51,7 @@ export default function Projects() {
 
   return (
     <div id="projects" sx={{ paddingTop: "10vh" }}>
-      <PageHeading pageTitle="PROJECTS" />
+      <PageHeading pageTitle="Projects" />
       {projects.map((project, index) => {
         const alt = (index + 1) % 2 === 0;
 

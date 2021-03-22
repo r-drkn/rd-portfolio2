@@ -7,7 +7,7 @@ import PageHeading from "../../components/PageHeading";
 export default function Contact() {
   return (
     <div id="contact" sx={{ height: "100vh", pt: "10vh", px: "1rem" }}>
-      <PageHeading pageTitle="CONTACT" />
+      <PageHeading pageTitle="Contact" />
       <form
         sx={{
           p: "2rem",

@@ -15,33 +15,35 @@ export default function PageHeading(props) {
   const { text, background } = theme.colors;
 
   useEffect(() => {
-    tl.current.to(heading, {
+    tl.current.from(heading, {
       scrollTrigger: {
         trigger: heading,
-        start: "start 50%",
-        end: "bottom 50%",
-        scrub: true,
+        start: "start 80%",
+        end: "bottom 80%",
+        once: true,
+        scrub: 1,
       },
-      backgroundImage: `linear-gradient(45deg, ${background} -20%, ${text} 50%, ${background} 100%)`,
-      ease: "none",
+      ease: "ease",
       duration: 1,
+      autoAlpha: 0,
+      xPercent: 100,
     });
-  }, [background, text]);
+  }, [background, text, pageTitle]);
 
   return (
     <div sx={{ display: "flex" }}>
       <h1
         ref={(el) => (heading = el)}
         sx={{
-          fontSize: "5rem",
-          backgroundImage: `linear-gradient(45deg, ${background} -200%, ${text} -100%, ${background} 0%)`,
-          backgroundClip: "text",
-          textFillColor: "transparent",
-          WebkitBackgroundClip: "text",
-          WebkitTextFillColor: "transparent",
+          fontFamily: "secondary",
+          fontSize: "3rem",
+          fontWeight: 400,
+          letterSpacing: "3px",
+          pl: "0.5rem",
+          m: 0,
         }}
       >
-        {pageTitle}
+        {pageTitle.toUpperCase()}
       </h1>
     </div>
   );
