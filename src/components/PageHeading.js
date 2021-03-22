@@ -20,7 +20,6 @@ export default function PageHeading(props) {
         trigger: heading,
         start: "start 80%",
         end: "bottom 80%",
-        once: true,
         scrub: 1,
       },
       ease: "ease",

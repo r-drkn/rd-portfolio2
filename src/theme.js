@@ -12,8 +12,9 @@ const theme = {
     // background: "#F2F2F2",
   },
   fonts: {
-    primary: "Barlow, sans-serif",
-    secondary: "Fira Code, serif",
+    primary: "Karla, sans-serif",
+    secondary: "Rumeur, sans-serif",
+    code: "Fira Code, serif",
   },
   styles: {
     root: {

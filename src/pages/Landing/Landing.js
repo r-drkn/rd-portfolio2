@@ -46,7 +46,7 @@ export default function Landing(props) {
         sx={{
           visibility: "hidden",
           fontSize: "5rem",
-          gridArea: "2 / 1 / 4 / 9",
+          gridArea: "2 / 1 / 4 / 10",
           padding: 0,
           margin: 0,
           display: "flex",

@@ -8,39 +8,48 @@ export default function Contact() {
   return (
     <div id="contact" sx={{ height: "100vh", pt: "10vh", px: "1rem" }}>
       <PageHeading pageTitle="Contact" />
-      <form
-        sx={{
-          p: "2rem",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "space-evenly",
-          alignItems: "center",
-          fontSize: "1.5rem",
-          fontFamily: "secondary",
-          label: {
-            p: "1rem",
-          },
-          input: {
-            p: "0.5rem",
-          },
-        }}
-      >
-        <label for="name">
-          Name:
+      <div sx={{ display: "flex", width:"100%" }}>
+        <form
+          sx={{
+            p: "2rem",
+            display: "grid",
+            width: "50%",
+            alignItems: "flex-start",
+            fontSize: "1.5rem",
+            fontFamily: "secondary",
+            label: {
+              p: "2rem",
+              pl: "0rem",
+            },
+            input: {
+              p: "0.5rem",
+            },
+            textarea: {
+              p: "0.5rem",
+            },
+          }}
+        >
+          <label for="name">Name:</label>
           <input type="text" name="name"></input>
-        </label>
-        <label for="email">
-          Email:
+
+          <label for="email" sx={{ gridColumn: "1" }}>
+            Email:
+          </label>
           <input type="email" name="email"></input>
-        </label>
-        <label for="message" sx={{ display: "flex" }}>
-          Message:
+
+          <label for="message" sx={{ display: "flex" }}>
+            Message:
+          </label>
           <textarea name="message" rows="5"></textarea>
-        </label>
-        <label for="submit">
-          <input type="submit" name="submit" value="Send"></input>
-        </label>
-      </form>
+
+          <label for="submit">
+            <input type="submit" name="submit" value="Send"></input>
+          </label>
+        </form>
+        <div sx={{border:"2px solid red", width:"50%"}}>
+          
+        </div>
+      </div>
     </div>
   );
 }

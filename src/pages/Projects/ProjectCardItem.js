@@ -132,7 +132,7 @@ export default function ProjectCardItem(props) {
             gridArea: alt ? "3 / 7 / 4 / 11" : "3 / 1 / 4 / 5",
             display: "flex",
             alignItems: "center",
-            fontFamily: "secondary",
+            fontFamily: "code",
             fontSize: "0.8rem",
           }}
         >
