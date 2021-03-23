@@ -52,6 +52,7 @@ export default function Landing(props) {
           display: "flex",
           alignItems: "center",
           fontWeight: "400",
+          color: "secondary",
         }}
       >
         HI, I'M ROB.

@@ -14,7 +14,8 @@ export default function ProjectCardItem(props) {
   let image = useRef(null);
   let description = useRef(null);
   let tech = useRef(null);
-  let { primary, white } = theme.colors;
+
+  let { primary, text, white } = theme.colors;
   const { projectsReady } = props;
   console.log(projectsReady);
 
@@ -101,7 +102,8 @@ export default function ProjectCardItem(props) {
                 boxSizing: "border-box",
                 width: "100%",
                 height: "100%",
-                // boxShadow: "0px 2px 5px 2px #BBB",
+                border: `2px solid ${primary}`,
+                borderRadius: "1rem",
               }}
             ></img>
           )}
@@ -119,6 +121,7 @@ export default function ProjectCardItem(props) {
               color: "white",
               textAlign: "justify",
               fontSize: "1.2rem",
+              borderRadius: "1rem",
               // border: "0.5px solid #EEE",
               // boxShadow: "0px 2px 5px 2px #BBB",
             }}

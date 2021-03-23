@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { jsx } from "theme-ui";
 import ProjectCardItem from "./ProjectCardItem";
 import catalogWebsite from "../../images/catalog-website.png";
+import portfolioWebsite from "../../images/portfolio-website.png";
 import PageHeading from "../../components/PageHeading";
 
 export default function Projects() {
@@ -20,7 +21,7 @@ export default function Projects() {
       description:
         "Current iteration of my portfolio built in React with Theme UI for styling and GSAP for animations.",
       techStack: ["React", "GSAP", "Theme UI"],
-      image: "",
+      image: portfolioWebsite,
     },
     {
       title: "Recipe Book Hackathon",
