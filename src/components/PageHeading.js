@@ -20,8 +20,7 @@ export default function PageHeading(props) {
         trigger: heading,
         start: "start 80%",
         end: "bottom 80%",
-        // scrub: 1,
-        onEnterBack: { start: "start 80%", end: "bottom 80%", scrub: 1 },
+        scrub: 1,
       },
       ease: "ease",
       duration: 1,
@@ -42,6 +41,7 @@ export default function PageHeading(props) {
           pl: "0.5rem",
           color: "text",
           m: 0,
+          mt: "2rem",
         }}
       >
         {pageTitle.toUpperCase()}
