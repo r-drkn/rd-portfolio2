@@ -9,25 +9,35 @@ import theme from "../theme";
 export default function PageHeading(props) {
   const { pageTitle } = props;
   let heading = useRef(null);
+  let squiggle = useRef(null);
 
   gsap.registerPlugin(ScrollTrigger);
   let tl = useRef(gsap.timeline());
-  const { text, background } = theme.colors;
+  const { text, background, primary } = theme.colors;
   const { secondary } = theme.fonts;
 
   useEffect(() => {
-    tl.current.from(heading, {
-      scrollTrigger: {
-        trigger: heading,
-        start: "start 80%",
-        end: "bottom 80%",
-        scrub: 1,
-        markers: true,
-      },
-      ease: "ease",
-      duration: 1,
-      autoAlpha: 0,
-      xPercent: 100,
+    tl.current
+      .from(heading, {
+        ease: "ease",
+        duration: 1,
+        autoAlpha: 0,
+        xPercent: 100,
+      })
+      .from(squiggle, {
+        ease: "ease",
+        duration: 1,
+        autoAlpha: 0,
+        xPercent: 100,
+      });
+
+    ScrollTrigger.create({
+      trigger: heading,
+      animation: tl.current,
+      start: "start 80%",
+      end: "bottom 80%",
+      scrub: 1,
+      markers: true,
     });
   }, [background, text, pageTitle]);
 
@@ -36,7 +46,6 @@ export default function PageHeading(props) {
       sx={{
         display: "flex",
         position: "relative",
-        // justifyContent: "center",
         alignItems: "center",
       }}
     >
@@ -56,6 +65,21 @@ export default function PageHeading(props) {
         {pageTitle.toUpperCase()}
       </h1>
       <svg
+        ref={(el) => (squiggle = el)}
+        width="283"
+        height="28"
+        viewBox="0 0 283 28"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M4 14C12.3333 0.666667 20.6667 0.666667 29 14C37.3333 27.3333 45.6667 27.3333 54 14C62.3333 0.666667 70.6667 0.666667 79 14C87.3333 27.3333 95.6667 27.3333 104 14C112.333 0.666667 120.667 0.666667 129 14C137.333 27.3333 145.667 27.3333 154 14C162.333 0.666667 170.667 0.666667 179 14C187.333 27.3333 195.667 27.3333 204 14C212.333 0.666667 220.667 0.666667 229 14C237.333 27.3333 245.667 27.3333 254 14C262.333 0.666667 270.667 0.666667 279 14"
+          stroke={primary}
+          stroke-width="8"
+        />
+      </svg>
+
+      {/* <svg
         width="485"
         height="36"
         viewBox="0 0 485 36"
@@ -67,7 +91,7 @@ export default function PageHeading(props) {
           stroke="#4C75F2"
           stroke-width="5"
         />
-      </svg>
+      </svg> */}
 
       {/* <svg
         sx={{ position: "absolute", top: -50, left: "20%", zIndex: "-1" }}
