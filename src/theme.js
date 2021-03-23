@@ -1,3 +1,5 @@
+import fonts from "./fonts.css";
+
 const theme = {
   colors: {
     text: "#F2F2F2",
@@ -13,7 +15,7 @@ const theme = {
   },
   fonts: {
     primary: "Karla, sans-serif",
-    secondary: "Rumeur, sans-serif",
+    secondary: "'Proza Libre', sans-serif",
     code: "Fira Code, serif",
   },
   styles: {

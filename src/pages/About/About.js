@@ -28,7 +28,13 @@ export default function About() {
   return (
     <div
       id="about"
-      sx={{ fontFamily: "primary", height: "100vh", p: "1rem", pt: "10vh" }}
+      sx={{
+        fontFamily: "primary",
+        maxWidth: "900px",
+        height: "100vh",
+        p: "1rem",
+        pt: "10vh",
+      }}
     >
       <div ref={(el) => (aboutHeader = el)}>
         <PageHeading pageTitle="About" />
@@ -36,7 +42,7 @@ export default function About() {
       <div
         sx={{
           width: "100%",
-          p: "2rem",
+          p: "0rem",
           fontSize: "1.2rem",
           textAlign: "justify",
         }}

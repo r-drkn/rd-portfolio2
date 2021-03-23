@@ -4,6 +4,8 @@ import React, { useEffect, useRef, useState } from "react";
 import { jsx } from "theme-ui";
 import theme from "../theme.js";
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 const NavItem = (props) => {
   const { item, current, setCurrent } = props;
@@ -20,6 +22,7 @@ const NavItem = (props) => {
           m: "0.5rem 1rem",
           textDecoration: "none",
           color: white,
+          fontSize: "0.8rem",
         }}
         onClick={() => setCurrent(item)}
         onMouseEnter={() => {
@@ -69,7 +72,7 @@ export default function Nav() {
           width: "100%",
           maxWidth: "1280px",
           mx: "auto",
-          p: "1rem 1rem",
+          p: "0.5rem 1rem",
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",

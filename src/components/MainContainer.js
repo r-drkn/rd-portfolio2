@@ -8,13 +8,13 @@ export default function MainContainer({ children }) {
     <main
       sx={{
         width: "100%",
-        maxWidth: "900px",
+        maxWidth: "1280px",
         paddingTop: "10vh",
-        // borderLeft: "2px solid #777",
-        // borderRight: "2px solid #777",
-        // backgroundColor: "#DDD",
         mx: "auto",
-        // overflowX: "hidden",
+        position: "relative",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
       }}
     >
       {children}

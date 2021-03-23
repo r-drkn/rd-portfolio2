@@ -51,7 +51,7 @@ export default function Projects() {
   ];
 
   return (
-    <div id="projects" sx={{ paddingTop: "10vh" }}>
+    <div id="projects" sx={{ paddingTop: "10vh", maxWidth: "900px" }}>
       <PageHeading pageTitle="Projects" />
       {projects.map((project, index) => {
         const alt = (index + 1) % 2 === 0;

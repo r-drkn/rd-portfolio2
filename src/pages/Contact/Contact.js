@@ -6,7 +6,16 @@ import PageHeading from "../../components/PageHeading";
 
 export default function Contact() {
   return (
-    <div id="contact" sx={{ height: "100vh", pt: "10vh", px: "1rem" }}>
+    <div
+      id="contact"
+      sx={{
+        height: "100vh",
+        maxWidth: "900px",
+        width: "100%",
+        pt: "10vh",
+        px: "1rem",
+      }}
+    >
       <PageHeading pageTitle="Contact" />
       <div sx={{ display: "flex", width: "100%" }}>
         <form

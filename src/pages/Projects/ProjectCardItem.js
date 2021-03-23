@@ -15,7 +15,7 @@ export default function ProjectCardItem(props) {
   let description = useRef(null);
   let tech = useRef(null);
 
-  let { primary, text, white } = theme.colors;
+  let { primary, secondary, text, white } = theme.colors;
   const { projectsReady } = props;
   console.log(projectsReady);
 
@@ -83,9 +83,9 @@ export default function ProjectCardItem(props) {
           >
             {project.title}
           </h1>
-          <div
+          {/* <div
             sx={{ border: `0.5px dashed ${white}`, width: "30%", ml: "2rem" }}
-          ></div>
+          ></div> */}
         </div>
         <div
           ref={(el) => (image = el)}
@@ -102,7 +102,7 @@ export default function ProjectCardItem(props) {
                 boxSizing: "border-box",
                 width: "100%",
                 height: "100%",
-                border: `2px solid ${primary}`,
+                border: `2px solid ${secondary}`,
                 borderRadius: "1rem",
               }}
             ></img>
@@ -117,7 +117,7 @@ export default function ProjectCardItem(props) {
               m: 0,
               p: "1rem",
               fontWeight: 300,
-              backgroundColor: "primary",
+              backgroundColor: "secondary",
               color: "white",
               textAlign: "justify",
               fontSize: "1.2rem",
@@ -156,13 +156,13 @@ export default function ProjectCardItem(props) {
             gridArea: alt ? "11 / 7 / 12 / 11" : "10 / 6 / 11 / 11",
           }}
         >
-          <div
+          {/* <div
             sx={{
               border: `0.5px dashed ${white}`,
               width: "100%",
               ml: "2rem",
             }}
-          ></div>
+          ></div> */}
           <div>
             <a href="#" sx={{ pl: "0.5rem", color: "text" }}>
               WebLink
