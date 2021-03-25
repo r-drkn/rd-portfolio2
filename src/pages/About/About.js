@@ -37,31 +37,24 @@ export default function About() {
       }}
     >
       <div ref={(el) => (aboutHeader = el)}>
-        <PageHeading pageTitle="About" />
+        <PageHeading pageTitle="A bit about me:" />
       </div>
       <div
         sx={{
           width: "100%",
-          p: "0rem",
           fontSize: "1.2rem",
           textAlign: "justify",
+          padding: "2rem",
+          p: {
+            p: "0.5rem",
+          },
         }}
       >
-        <p className="aboutItems">
-          I’m interested in balancing the opportunities of web user interface
-          creation with the importance of building highly functional and
-          accessible experiences.
-        </p>
         <p className="aboutItems">
           I’m currently in the process of building out my portfolio with small
           jobs and personal projects. My goal throughout this is to not only
           showcase my current skills but to learn new skills while strengthening
           any weaknesses.
-        </p>
-        <p className="aboutItems">
-          When I’m away from the keyboard I enjoy cooking elaborate meals for
-          friends, electronic music and watching the Chicago Bulls fail to meet
-          my expectations despite years of my love and devotion.
         </p>
         <p className="aboutItems">
           Tech I’ve worked with includes: <br />
@@ -71,6 +64,11 @@ export default function About() {
         <p className="aboutItems">
           Tech I’m actively incorporating into my skill set: <br />
           Next.JS, Typescript, A11y
+        </p>
+        <p className="aboutItems">
+          When I’m away from the keyboard I enjoy cooking elaborate meals for
+          friends, electronic music and watching the Chicago Bulls fail to meet
+          my expectations despite years of my love and devotion.
         </p>
       </div>
     </div>

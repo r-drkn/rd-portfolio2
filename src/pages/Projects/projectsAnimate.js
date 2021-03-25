@@ -8,8 +8,8 @@ export let projectsAnimate = {
     scrollTrigger: {
       trigger: ".project",
       scrub: 1,
-      start: "top 80%",
-      end: "bottom 80%",
+      start: "top bottom",
+      end: "bottom bottom",
       id: "natural",
       once: true,
     },
@@ -21,8 +21,8 @@ export let projectsAnimate = {
     scrollTrigger: {
       trigger: ".project",
       scrub: 1,
-      start: "top 80%",
-      end: "bottom 80%",
+      start: "top bottom",
+      end: "bottom bottom",
       id: "alt",
       once: true,
     },

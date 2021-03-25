@@ -16,8 +16,6 @@ export default function ProjectCardItem(props) {
   let tech = useRef(null);
 
   let { primary, secondary, text, white } = theme.colors;
-  const { projectsReady } = props;
-  console.log(projectsReady);
 
   useEffect(() => {
     // remove spaces to give each item unique trigger from classname
@@ -38,7 +36,7 @@ export default function ProjectCardItem(props) {
       .from(image, alt ? projectsAnimate.alt : projectsAnimate.natural)
       .from(description, alt ? projectsAnimate.natural : projectsAnimate.alt)
       .from(tech, alt ? projectsAnimate.natural : projectsAnimate.alt);
-  }, [project.title, alt, projectsReady]);
+  }, [project.title, alt]);
 
   return (
     <div
@@ -59,7 +57,7 @@ export default function ProjectCardItem(props) {
           fontFamily: "primary",
           width: "100%",
           display: "grid",
-          gridTemplate: "repeat(10,2.5rem) / repeat(10,1fr)",
+          gridTemplate: "repeat(10,2rem) / repeat(10,1fr)",
         }}
       >
         <div
@@ -102,8 +100,8 @@ export default function ProjectCardItem(props) {
                 boxSizing: "border-box",
                 width: "100%",
                 height: "100%",
-                border: `2px solid ${secondary}`,
-                borderRadius: "1rem",
+                boxShadow: `0px 0px 2px 2px ${white}`,
+                // border: `2px solid ${secondary}`,
               }}
             ></img>
           )}
@@ -117,11 +115,12 @@ export default function ProjectCardItem(props) {
               m: 0,
               p: "1rem",
               fontWeight: 300,
-              backgroundColor: "secondary",
+              backgroundColor: "primary",
               color: "white",
               textAlign: "justify",
               fontSize: "1.2rem",
-              borderRadius: "1rem",
+              boxShadow: `0px 0px 2px 2px ${primary}`,
+
               // border: "0.5px solid #EEE",
               // boxShadow: "0px 2px 5px 2px #BBB",
             }}

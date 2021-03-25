@@ -16,7 +16,7 @@ export default function Contact() {
         px: "1rem",
       }}
     >
-      <PageHeading pageTitle="Contact" />
+      <PageHeading pageTitle="Get in touch!" />
       <div sx={{ display: "flex", width: "100%" }}>
         <form
           sx={{
