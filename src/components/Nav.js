@@ -5,6 +5,8 @@ import { jsx } from "theme-ui";
 import theme from "../theme.js";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useMediaQuery } from "react-responsive";
+
 gsap.registerPlugin(ScrollTrigger);
 
 const NavItem = (props) => {
@@ -56,6 +58,8 @@ export default function Nav() {
   const [current, setCurrent] = useState("home");
   const { primary } = theme.colors;
   const navItems = ["home", "about", "projects", "contact"];
+  const isMobile = useMediaQuery(theme.mobile);
+  const isTablet = useMediaQuery(theme.tablet);
 
   return (
     <nav
@@ -99,16 +103,20 @@ export default function Nav() {
               position: "relative",
             }}
           >
-            {navItems.map((navItem) => {
-              return (
-                <NavItem
-                  item={navItem}
-                  current={current}
-                  setCurrent={setCurrent}
-                  key={navItem}
-                />
-              );
-            })}
+            {isMobile ? (
+              <div>blah</div>
+            ) : (
+              navItems.map((navItem) => {
+                return (
+                  <NavItem
+                    item={navItem}
+                    current={current}
+                    setCurrent={setCurrent}
+                    key={navItem}
+                  />
+                );
+              })
+            )}
           </ul>
           <div
             className="line"

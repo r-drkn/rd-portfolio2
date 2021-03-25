@@ -18,6 +18,10 @@ const theme = {
     secondary: "'Proza Libre', sans-serif",
     code: "Fira Code, serif",
   },
+  breakpoints: ["767px", "991px", "992px"],
+  mobile: { maxWidth: 767 },
+  tablet: { minWidth: 768, maxWidth: 991 },
+  desktop: { minWidth: 992 },
   styles: {
     root: {
       boxSizing: "border-box",
