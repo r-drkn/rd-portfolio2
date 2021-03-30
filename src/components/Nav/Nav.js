@@ -2,59 +2,17 @@
 /** @jsx jsx */
 import React, { useEffect, useRef, useState } from "react";
 import { jsx } from "theme-ui";
-import theme from "../theme.js";
+import theme from "../../theme.js";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useMediaQuery } from "react-responsive";
+import NavDrawer from "./NavDrawer";
+import NavItem from "./NavItem";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const NavItem = (props) => {
-  const { item, current, setCurrent } = props;
-  const { primary, secondary, white } = theme.colors;
-  let domElement = useRef(null);
-
-  return (
-    <li>
-      <a
-        ref={(el) => (domElement = el)}
-        href={`/#${item === "home" ? "" : item}`}
-        sx={{
-          display: "block",
-          m: "0.5rem 1rem",
-          textDecoration: "none",
-          color: white,
-          fontSize: "0.8rem",
-        }}
-        onClick={() => setCurrent(item)}
-        onMouseEnter={() => {
-          gsap.to(".line", {
-            x: domElement.offsetLeft,
-            width: domElement.clientWidth,
-            autoAlpha: 1,
-          });
-          gsap.to(domElement, {
-            color: secondary,
-          });
-        }}
-        onMouseLeave={() => {
-          if (item !== current) {
-            gsap.to(".line", {
-              autoAlpha: 0,
-            });
-          }
-          gsap.to(domElement, {
-            color: white,
-          });
-        }}
-      >
-        {item.toUpperCase()}
-      </a>
-    </li>
-  );
-};
-
 export default function Nav() {
+  const [showMenu, setShowMenu] = useState(false);
   const [current, setCurrent] = useState("home");
   const { primary } = theme.colors;
   const navItems = ["home", "about", "projects", "contact"];
@@ -104,7 +62,39 @@ export default function Nav() {
             }}
           >
             {isMobile ? (
-              <div>blah</div>
+              showMenu ? (
+                <>
+                  <button
+                    sx={{
+                      width: "1rem",
+                      height: "1rem",
+                      border: "3px solid red",
+                    }}
+                    onClick={() => setShowMenu(false)}
+                  ></button>
+                  <NavDrawer>
+                    {navItems.map((navItem) => {
+                      return (
+                        <NavItem
+                          item={navItem}
+                          current={current}
+                          setCurrent={setCurrent}
+                          key={navItem}
+                        />
+                      );
+                    })}
+                  </NavDrawer>
+                </>
+              ) : (
+                <button
+                  sx={{
+                    width: "1rem",
+                    height: "1rem",
+                    border: "3px solid purple",
+                  }}
+                  onClick={() => setShowMenu(true)}
+                ></button>
+              )
             ) : (
               navItems.map((navItem) => {
                 return (
