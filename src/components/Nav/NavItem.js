@@ -1,18 +1,16 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef } from "react";
 import { jsx } from "theme-ui";
 import theme from "../../theme.js";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useMediaQuery } from "react-responsive";
-import NavDrawer from "./NavDrawer";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function NavItem(props) {
-  const { item, current, setCurrent } = props;
-  const { primary, secondary, white } = theme.colors;
+  const { item, current, setCurrent, setShowMenu } = props;
+  const { secondary, white } = theme.colors;
   let domElement = useRef(null);
 
   return (
@@ -25,9 +23,11 @@ export default function NavItem(props) {
           m: "0.5rem 1rem",
           textDecoration: "none",
           color: white,
-          fontSize: "0.8rem",
         }}
-        onClick={() => setCurrent(item)}
+        onClick={() => {
+          setCurrent(item);
+          setShowMenu(false);
+        }}
         onMouseEnter={() => {
           gsap.to(".line", {
             x: domElement.offsetLeft,
