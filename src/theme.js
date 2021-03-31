@@ -7,6 +7,7 @@ const theme = {
     secondary: "#F21365",
     white: "#F2F2F2",
     background: "#031926",
+    backgroundOpaque: "rgba(003, 025, 038, 0.9)",
     // text: "#0540F2",
     // primary: "#0554F2",
     // secondary: "#91AAF2",

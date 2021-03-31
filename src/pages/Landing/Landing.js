@@ -14,7 +14,7 @@ export default function Landing(props) {
   let byline = useRef(null);
   let description = useRef(null);
   let tl = useRef(gsap.timeline());
-  const { primary, background } = theme.colors;
+  const { primary } = theme.colors;
   const meSVG = useRef(null);
 
   useEffect(() => {

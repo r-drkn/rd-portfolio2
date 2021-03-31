@@ -31,7 +31,6 @@ export default function About() {
       sx={{
         fontFamily: "primary",
         maxWidth: "900px",
-        height: "100vh",
         p: "1rem",
         pt: "10vh",
       }}
@@ -44,9 +43,9 @@ export default function About() {
           width: "100%",
           fontSize: "1.2rem",
           textAlign: "justify",
-          padding: "2rem",
+          padding: [null, "2rem"],
           p: {
-            p: "0.5rem",
+            fontWeight: "300",
           },
         }}
       >
