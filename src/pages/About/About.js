@@ -46,28 +46,38 @@ export default function About() {
           padding: [null, "2rem"],
           p: {
             fontWeight: "300",
+            lineHeight: "2rem",
           },
         }}
       >
         <p className="aboutItems">
+          Hi I'm Robert Dirken. I'm a web developer living in Brisbane. I've
+          recently finished a bootcamp at Coder Academy. Here I learned full
+          stack web development in Ruby on Rails and the MERN stack.
+        </p>
+        <p className="aboutItems">
           I’m currently in the process of building out my portfolio with small
           jobs and personal projects. My goal throughout this is to not only
-          showcase my current skills but to learn new skills while strengthening
-          any weaknesses.
-        </p>
-        <p className="aboutItems">
-          Tech I’ve worked with includes: <br />
-          React, Node, Express, MongoDB, SQL, Ruby/Rails, GSAP, TailwindCSS,
-          MaterialUI, ThemeUI,
-        </p>
-        <p className="aboutItems">
-          Tech I’m actively incorporating into my skill set: <br />
-          Next.JS, Typescript, A11y
+          showcase my current skills but to learn new skills and technologies
+          along the way.
         </p>
         <p className="aboutItems">
           When I’m away from the keyboard I enjoy cooking elaborate meals for
           friends, electronic music and watching the Chicago Bulls fail to meet
           my expectations despite years of my love and devotion.
+        </p>
+        <p className="aboutItems">
+          Tech I’ve worked with includes: <br />
+          <div sx={{ pl: "1rem", fontFamily: "code", color: "third" }}>
+            React, Node, Express, MongoDB, SQL, Ruby/Rails, GSAP, TailwindCSS,
+            MaterialUI, ThemeUI
+          </div>
+        </p>
+        <p className="aboutItems">
+          Tech I’m actively incorporating into my skill set: <br />
+          <div sx={{ pl: "1rem", fontFamily: "code", color: "third" }}>
+            Next.JS, Typescript, A11y
+          </div>
         </p>
       </div>
     </div>

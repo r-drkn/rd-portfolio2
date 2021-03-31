@@ -7,6 +7,7 @@ import { jsx } from "theme-ui";
 import { landingAnimate } from "./landingAnimate.js";
 import gsap from "gsap";
 import theme from "../../theme.js";
+import selfie from "../../images/selfie-test.png";
 
 export default function Landing(props) {
   let heading = useRef(null);
@@ -39,7 +40,6 @@ export default function Landing(props) {
         letterSpacing: "2px",
         p: "1rem",
         pb: "2rem",
-        position: "relative",
       }}
     >
       <svg
@@ -92,6 +92,7 @@ export default function Landing(props) {
           display: "flex",
           justifyContent: "center",
           flexDirection: "column",
+          lineHeight: "4rem",
         }}
       >
         <span sx={{ fontSize: ["2rem", "3rem"] }}>I make things</span> <br />
@@ -104,7 +105,6 @@ export default function Landing(props) {
           visibility: "hidden",
           gridArea: ["7 / 1 / 8 / 12 ", "7 / 1 / 8 / 8 "],
           fontSize: "1.2rem",
-          textAlign: "justify",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
@@ -113,17 +113,37 @@ export default function Landing(props) {
         <p
           sx={{
             m: 0,
+            color: "third",
+            lineHeight: "2rem",
           }}
         >
           I'm a Junior Web Developer living in Brisbane with a particular
-          interest in front end development.
+          interest in React and Front End development.
         </p>
       </div>
       <div
         sx={{
-          gridArea: "1 / 10 / 7 / 16 ",
+          gridArea: "3 / 11 / 7/ 17 ",
+          backgroundColor: "secondary",
+          padding: "0",
+          display: "flex",
+          borderRadius: "50%",
+          border: "5px solid red",
         }}
-      ></div>
+      >
+        <img
+          src={selfie}
+          alt="Robert Dirken"
+          sx={{
+            width: "100%",
+            height: "100%",
+            p: "-1rem",
+            m: 0,
+            boxShadow: "0px 2px 2px 2px #F21365",
+            borderRadius: "50%",
+          }}
+        ></img>
+      </div>
       {/* <LookingForWork gridArea="6 / 13 / 8 / 16 " /> */}
     </div>
   );
