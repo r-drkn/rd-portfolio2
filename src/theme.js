@@ -1,5 +1,3 @@
-import fonts from "./fonts.css";
-
 const theme = {
   colors: {
     text: "#F2F2F2",

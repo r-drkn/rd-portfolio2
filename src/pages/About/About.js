@@ -1,16 +1,16 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import React, { useEffect, useRef } from "react";
+// eslint-disable-next-line
+import React from "react";
+import { useEffect, useRef } from "react";
 import { jsx } from "theme-ui";
 import PageHeading from "../../components/PageHeading";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import theme from "../../theme.js";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function About() {
   let aboutHeader = useRef(null);
-  const { text } = theme;
 
   useEffect(() => {
     gsap.from(".aboutItems", {

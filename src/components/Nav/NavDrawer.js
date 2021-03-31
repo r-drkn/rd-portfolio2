@@ -1,7 +1,9 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
+// eslint-disable-next-line
+import React from "react";
 import { jsx } from "theme-ui";
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import gsap from "gsap";
 
 export default function NavDrawer(props) {

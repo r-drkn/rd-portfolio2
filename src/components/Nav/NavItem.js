@@ -1,6 +1,8 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import React, { useRef } from "react";
+// eslint-disable-next-line
+import React from "react";
+import { useRef } from "react";
 import { jsx } from "theme-ui";
 import theme from "../../theme.js";
 import gsap from "gsap";

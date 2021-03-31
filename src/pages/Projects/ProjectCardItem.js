@@ -1,11 +1,11 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import React, { useEffect, useRef, useState } from "react";
+// eslint-disable-next-line
+import React from "react";
+import { useEffect, useRef } from "react";
 import { jsx } from "theme-ui";
 import { projectsAnimate } from "./projectsAnimate.js";
 import gsap from "gsap";
-import theme from "../../theme";
-import rob from "../../images/rob.svg";
 
 export default function ProjectCardItem(props) {
   const { project, alt } = props;
@@ -14,8 +14,6 @@ export default function ProjectCardItem(props) {
   let image = useRef(null);
   let description = useRef(null);
   let tech = useRef(null);
-
-  let { primary, secondary, text, white } = theme.colors;
 
   useEffect(() => {
     // remove spaces to give each item unique trigger from classname
@@ -42,13 +40,13 @@ export default function ProjectCardItem(props) {
     <div
       className={project.title.replace(/\s+/g, "")}
       sx={{
-        height: "75vh",
+        height: ["85vh", "75vh"],
         width: "100%",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
         overflow: "hidden",
-        my: "3rem",
+        mb: ["6rem", "3rem"],
         p: "1rem",
       }}
     >
@@ -57,7 +55,10 @@ export default function ProjectCardItem(props) {
           fontFamily: "primary",
           width: "100%",
           display: "grid",
-          gridTemplate: "repeat(10,2rem) / repeat(10,1fr)",
+          gridTemplate: [
+            "repeat(16,2rem) / repeat(10,1fr)",
+            "repeat(10,2rem) / repeat(10,1fr)",
+          ],
         }}
       >
         <div
@@ -81,15 +82,35 @@ export default function ProjectCardItem(props) {
           >
             {project.title}
           </h1>
-          {/* <div
-            sx={{ border: `0.5px dashed ${white}`, width: "30%", ml: "2rem" }}
-          ></div> */}
+        </div>
+        <div
+          ref={(el) => (tech = el)}
+          sx={{
+            gridArea: alt
+              ? ["2 / 1 / 3 / 10", "3 / 7 / 4 / 11"]
+              : ["2 / 2 / 3 / 11", "3 / 1 / 4 / 5"],
+            display: "flex",
+            alignItems: "center",
+            fontFamily: "code",
+            fontSize: "0.8rem",
+          }}
+        >
+          {project.techStack.map((tech, index) => {
+            return (
+              <span key={tech} sx={{ pr: "0.2rem" }}>
+                {tech}
+                {index !== project.techStack.length - 1 && ","}
+              </span>
+            );
+          })}
         </div>
         <div
           ref={(el) => (image = el)}
           sx={{
-            gridArea: alt ? "2 / 1 / 11 / 7" : "2 / 5 / 10 / 12",
-            px: "1rem",
+            gridArea: alt
+              ? ["3 / 1 / 10 / 11", "2 / 1 / 11 / 7"]
+              : ["3 / 1 / 10 / 11", "2 / 5 / 10 / 12"],
+            px: ["0rem", "1rem"],
           }}
         >
           {project.image && (
@@ -100,15 +121,17 @@ export default function ProjectCardItem(props) {
                 boxSizing: "border-box",
                 width: "100%",
                 height: "100%",
-                boxShadow: `0px 0px 2px 2px ${white}`,
-                // border: `2px solid ${secondary}`,
               }}
             ></img>
           )}
         </div>
         <div
           ref={(el) => (description = el)}
-          sx={{ gridArea: alt ? "4 / 6 / 8 / 11" : "4 / 1 / 8 / 6" }}
+          sx={{
+            gridArea: alt
+              ? ["11 / 1 / 17 / 10", "4 / 6 / 8 / 11"]
+              : ["11 / 2 / 17 / 11", "4 / 1 / 8 / 6"],
+          }}
         >
           <p
             sx={{
@@ -118,57 +141,20 @@ export default function ProjectCardItem(props) {
               backgroundColor: "primary",
               color: "white",
               textAlign: "justify",
-              fontSize: "1.2rem",
-              boxShadow: `0px 0px 2px 2px ${primary}`,
-
-              // border: "0.5px solid #EEE",
-              // boxShadow: "0px 2px 5px 2px #BBB",
+              fontSize: ["1rem", "1.2rem"],
             }}
           >
             {project.description}
           </p>
-        </div>
-        <div
-          ref={(el) => (tech = el)}
-          sx={{
-            gridArea: alt ? "3 / 7 / 4 / 11" : "3 / 1 / 4 / 5",
-            display: "flex",
-            alignItems: "center",
-            fontFamily: "code",
-            fontSize: "0.8rem",
-          }}
-        >
-          {project.techStack.map((tech, index) => {
-            return (
-              <span key={tech} sx={{ pr: "0.5rem" }}>
-                {tech}
-                {index !== project.techStack.length - 1 && ","}
-              </span>
-            );
-          })}
-        </div>
-        <div
-          sx={{
-            display: "flex",
-            justifyContent: "flex-end",
-            alignItems: "center",
-            gridArea: alt ? "11 / 7 / 12 / 11" : "10 / 6 / 11 / 11",
-          }}
-        >
-          {/* <div
+          <div
             sx={{
-              border: `0.5px dashed ${white}`,
-              width: "100%",
-              ml: "2rem",
+              display: "flex",
+              alignItems: "center",
+              pt: "1rem",
             }}
-          ></div> */}
-          <div>
-            <a href="#" sx={{ pl: "0.5rem", color: "text" }}>
-              WebLink
-            </a>
-            <a href="#" sx={{ pl: "0.5rem", color: "text" }}>
-              GitLink
-            </a>
+          >
+            <span sx={{ pl: "0.5rem", color: "text" }}>WebLink</span>
+            <span sx={{ pl: "0.5rem", color: "text" }}>GitLink</span>
           </div>
         </div>
       </div>

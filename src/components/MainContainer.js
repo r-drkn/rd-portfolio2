@@ -1,5 +1,6 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
+// eslint-disable-next-line
 import React from "react";
 import { jsx } from "theme-ui";
 
@@ -15,6 +16,7 @@ export default function MainContainer({ children }) {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
+        overflowX: "hidden",
       }}
     >
       {children}

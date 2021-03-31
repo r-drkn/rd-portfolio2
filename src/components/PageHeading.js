@@ -1,38 +1,36 @@
-import React, { useEffect, useRef } from "react";
 /** @jsxRuntime classic */
 /** @jsx jsx */
+// eslint-disable-next-line
+import React from "react";
+import { useEffect, useRef } from "react";
 import { jsx } from "theme-ui";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import theme from "../theme";
-import { useMediaQuery } from "react-responsive";
 
 export default function PageHeading(props) {
   const { pageTitle } = props;
 
-  const isMobile = useMediaQuery(theme.mobile);
   let heading = useRef(null);
-  let squiggle = useRef(null);
 
   gsap.registerPlugin(ScrollTrigger);
   let tl = useRef(gsap.timeline());
-  const { text, background, primary } = theme.colors;
+  const { text, background } = theme.colors;
   const { secondary } = theme.fonts;
 
   useEffect(() => {
-    tl.current
-      .from(heading, {
-        ease: "ease",
-        duration: 1,
-        autoAlpha: 0,
-        xPercent: 100,
-      })
-      .from(squiggle, {
-        ease: "back",
-        duration: 1,
-        autoAlpha: 0,
-        xPercent: 100,
-      });
+    tl.current.from(heading, {
+      ease: "ease",
+      duration: 1,
+      autoAlpha: 0,
+      xPercent: 100,
+    });
+    // .from(squiggle, {
+    //   ease: "back",
+    //   duration: 1,
+    //   autoAlpha: 0,
+    //   xPercent: 100,
+    // });
 
     ScrollTrigger.create({
       trigger: heading,
@@ -57,7 +55,7 @@ export default function PageHeading(props) {
         ref={(el) => (heading = el)}
         sx={{
           fontFamily: secondary,
-          fontSize: ["1rem", "2rem"],
+          fontSize: ["2.5rem", "2rem"],
           fontWeight: 800,
           letterSpacing: ["0.5rem", "1rem"],
           pl: "0.5rem",
@@ -68,7 +66,7 @@ export default function PageHeading(props) {
       >
         {pageTitle.toUpperCase()}
       </h1>
-      <svg
+      {/* <svg
         ref={(el) => (squiggle = el)}
         width={isMobile ? "150" : "283"}
         height="28"
@@ -81,7 +79,7 @@ export default function PageHeading(props) {
           stroke={primary}
           strokeWidth="8"
         />
-      </svg>
+      </svg> */}
     </div>
   );
 }

@@ -1,6 +1,7 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import React, { useState } from "react";
+// eslint-disable-next-line
+import React from "react";
 import { jsx } from "theme-ui";
 import ProjectCardItem from "./ProjectCardItem";
 import catalogWebsite from "../../images/catalog-website.png";
@@ -24,7 +25,7 @@ export default function Projects() {
       image: portfolioWebsite,
     },
     {
-      title: "Recipe Book Hackathon",
+      title: "Recipe Hackathon",
       description:
         "Three day Hackathon where my partner and I built a user uploaded recipe database accessible via a global map. The idea was for a product where the geographic locality of recipes could be centralized and users could upload their local dishes",
       techStack: ["Javascript", "Node.js", "Handlebars", "Mapbox"],

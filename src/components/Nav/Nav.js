@@ -1,22 +1,22 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import React, { useCallback, useEffect, useRef, useState } from "react";
+// eslint-disable-next-line
+import React from "react";
+import { useEffect, useState } from "react";
 import { jsx } from "theme-ui";
 import theme from "../../theme.js";
-import gsap from "gsap";
 import { useMediaQuery } from "react-responsive";
 import NavDrawer from "./NavDrawer";
 import NavItem from "./NavItem";
 import MenuIcon from "./MenuIcon.js";
 import useDebouncedCallback from "../../hooks/useDebouncedCallback";
-import { debounce } from "../../util/helpers";
 
 export default function Nav() {
   const [showMenu, setShowMenu] = useState(false);
   const [current, setCurrent] = useState("home");
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [showNav, setShowNav] = useState(true);
-  const { primary, white } = theme.colors;
+  const { primary } = theme.colors;
   const navItems = ["home", "about", "projects", "contact"];
 
   const isMobile = useMediaQuery(theme.mobile);
@@ -32,7 +32,7 @@ export default function Nav() {
         currentScrollPos < 30
     );
     setPrevScrollPos(currentScrollPos);
-  }, 40);
+  }, 100);
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);

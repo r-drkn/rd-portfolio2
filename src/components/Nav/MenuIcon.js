@@ -1,8 +1,10 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
+// eslint-disable-next-line
+import React from "react";
 import { jsx } from "theme-ui";
 import gsap from "gsap/gsap-core";
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import theme from "../../theme";
 
 export default function MenuIcon(props) {
