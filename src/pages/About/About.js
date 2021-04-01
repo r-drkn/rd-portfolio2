@@ -44,9 +44,11 @@ export default function About() {
           fontSize: "1.2rem",
           textAlign: "justify",
           padding: [null, "2rem"],
+          mt: "2rem",
           p: {
             fontWeight: "300",
             lineHeight: "2rem",
+            p: ["1rem", "0"],
           },
         }}
       >

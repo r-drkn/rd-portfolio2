@@ -8,6 +8,7 @@ import { landingAnimate } from "./landingAnimate.js";
 import gsap from "gsap";
 import theme from "../../theme.js";
 import selfie from "../../images/selfie-test.png";
+import { useMediaQuery } from "react-responsive";
 
 export default function Landing(props) {
   let heading = useRef(null);
@@ -15,6 +16,7 @@ export default function Landing(props) {
   let description = useRef(null);
   let tl = useRef(gsap.timeline());
   const { primary } = theme.colors;
+  const isMobile = useMediaQuery(theme.mobile);
 
   useEffect(() => {
     heading.style.visibility = "visible";
@@ -121,29 +123,31 @@ export default function Landing(props) {
           interest in React and Front End development.
         </p>
       </div>
-      <div
-        sx={{
-          gridArea: "3 / 11 / 7/ 17 ",
-          backgroundColor: "secondary",
-          padding: "0",
-          display: "flex",
-          borderRadius: "50%",
-          border: "5px solid red",
-        }}
-      >
-        <img
-          src={selfie}
-          alt="Robert Dirken"
+      {!isMobile && (
+        <div
           sx={{
-            width: "100%",
-            height: "100%",
-            p: "-1rem",
-            m: 0,
-            boxShadow: "0px 2px 2px 2px #F21365",
+            gridArea: "3 / 11 / 7/ 17 ",
+            backgroundColor: "secondary",
+            padding: "0",
+            display: "flex",
             borderRadius: "50%",
+            border: "5px solid red",
           }}
-        ></img>
-      </div>
+        >
+          <img
+            src={selfie}
+            alt="Robert Dirken"
+            sx={{
+              width: "100%",
+              height: "100%",
+              p: "-1rem",
+              m: 0,
+              boxShadow: "0px 2px 2px 2px #F21365",
+              borderRadius: "50%",
+            }}
+          ></img>
+        </div>
+      )}
       {/* <LookingForWork gridArea="6 / 13 / 8 / 16 " /> */}
     </div>
   );

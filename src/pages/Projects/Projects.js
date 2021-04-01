@@ -53,12 +53,17 @@ export default function Projects() {
 
   return (
     <div id="projects" sx={{ paddingTop: "10vh", maxWidth: "900px" }}>
-      <PageHeading pageTitle="My Projects" />
+      <PageHeading pageTitle="My Projects:" />
       {projects.map((project, index) => {
         const alt = (index + 1) % 2 === 0;
 
         return (
-          <ProjectCardItem project={project} alt={alt} key={project.title} />
+          <ProjectCardItem
+            project={project}
+            alt={alt}
+            key={project.title}
+            hidden={index < 2}
+          />
         );
       })}
     </div>
