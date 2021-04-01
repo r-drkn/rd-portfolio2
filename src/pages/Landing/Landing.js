@@ -8,7 +8,7 @@ import { landingAnimate } from "./landingAnimate.js";
 import gsap from "gsap";
 import theme from "../../theme.js";
 // import selfie from "../../images/selfie-test.png";
-import { useMediaQuery } from "react-responsive";
+// import { useMediaQuery } from "react-responsive";
 
 export default function Landing(props) {
   let heading = useRef(null);
