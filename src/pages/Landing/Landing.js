@@ -7,7 +7,7 @@ import { jsx } from "theme-ui";
 import { landingAnimate } from "./landingAnimate.js";
 import gsap from "gsap";
 import theme from "../../theme.js";
-import selfie from "../../images/selfie-test.png";
+// import selfie from "../../images/selfie-test.png";
 import { useMediaQuery } from "react-responsive";
 
 export default function Landing(props) {
@@ -16,7 +16,7 @@ export default function Landing(props) {
   let description = useRef(null);
   let tl = useRef(gsap.timeline());
   const { primary } = theme.colors;
-  const isMobile = useMediaQuery(theme.mobile);
+  // const isMobile = useMediaQuery(theme.mobile);
 
   useEffect(() => {
     heading.style.visibility = "visible";
