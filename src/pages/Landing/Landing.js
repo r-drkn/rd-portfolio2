@@ -123,11 +123,11 @@ export default function Landing(props) {
           interest in React and Front End development.
         </p>
       </div>
-      {!isMobile && (
+      {/* {!isMobile && (
         <div
           sx={{
             gridArea: "3 / 11 / 8/ 17 ",
-            backgroundColor: "white",
+            backgroundColor: "inherit",
             padding: "0",
             display: "flex",
             borderRadius: "50%",
@@ -140,14 +140,13 @@ export default function Landing(props) {
             sx={{
               width: "100%",
               height: "100%",
-              p: "-1rem",
               m: 0,
               boxShadow: "0px 2px 2px 2px #F21365",
               borderRadius: "50%",
             }}
           ></img>
         </div>
-      )}
+      )} */}
       {/* <LookingForWork gridArea="6 / 13 / 8 / 16 " /> */}
     </div>
   );

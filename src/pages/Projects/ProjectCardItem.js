@@ -71,8 +71,8 @@ export default function ProjectCardItem(props) {
               width: "100%",
               display: "grid",
               gridTemplate: [
-                "4rem repeat(15,2rem) / repeat(10,1fr)",
-                "repeat(10,2rem) / repeat(10,1fr)",
+                "repeat(15,2rem) / repeat(10,1fr)",
+                "4rem repeat(9,2rem) / repeat(10,1fr)",
               ],
             }}
           >
