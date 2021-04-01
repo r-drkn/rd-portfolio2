@@ -50,7 +50,7 @@ export default function ProjectCardItem(props) {
     <div
       className={project.title.replace(/\s+/g, "")}
       sx={{
-        height: showProject ? ["85vh", "50vh"] : ["10vh", "50vh"],
+        height: showProject ? ["85vh", "50vh"] : ["10vh", "10vh"],
         width: "100%",
         display: "flex",
         flexDirection: "column",
