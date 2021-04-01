@@ -89,6 +89,7 @@ export default function ProjectCardItem(props) {
             color: "text",
             backgroundColor: "background",
             border: `2px solid ${white}`,
+            p: " 0.5rem 1rem",
           }}
           onClick={() => setShowProject(!showProject)}
         >

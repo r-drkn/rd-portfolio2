@@ -27,18 +27,17 @@ export default function Nav() {
       .from(nav, {
         yPercent: -100,
         paused: true,
-        duration: 0.2,
-        ease: "none",
+        duration: 0.4,
+        ease: "ease",
+        autoAlpha: 0,
       })
       .progress(1);
     ScrollTrigger.create({
       start: "top top",
       end: 99999,
       onUpdate: (self) => {
-        console.log("Direction:", self.direction);
         self.direction === -1 ? showNav.play() : showNav.reverse();
       },
-      markers: true,
     });
   }, []);
 

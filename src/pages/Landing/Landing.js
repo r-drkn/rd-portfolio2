@@ -126,8 +126,8 @@ export default function Landing(props) {
       {!isMobile && (
         <div
           sx={{
-            gridArea: "3 / 11 / 7/ 17 ",
-            backgroundColor: "secondary",
+            gridArea: "3 / 11 / 8/ 17 ",
+            backgroundColor: "white",
             padding: "0",
             display: "flex",
             borderRadius: "50%",

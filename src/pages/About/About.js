@@ -16,18 +16,16 @@ export default function About() {
     gsap.from(".aboutItems", {
       scrollTrigger: {
         trigger: aboutHeader,
-        start: "bottom 50%",
+        start: "top 50%",
       },
-      duration: 1,
       autoAlpha: 0,
       y: 50,
-      stagger: 0.2,
+      stagger: 0.5,
     });
   }, []);
 
   return (
     <div
-      id="about"
       sx={{
         fontFamily: "primary",
         maxWidth: "900px",
