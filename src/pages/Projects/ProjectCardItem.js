@@ -11,6 +11,7 @@ import theme from "../../theme";
 export default function ProjectCardItem(props) {
   const { project, alt, hidden } = props;
   const [showProject, setShowProject] = useState(hidden);
+  const { white } = theme.colors;
   let tl = useRef(gsap.timeline());
   let title = useRef(null);
   let image = useRef(null);
@@ -84,7 +85,11 @@ export default function ProjectCardItem(props) {
           {project.title}
         </h1>
         <button
-          sx={{ color: "primary" }}
+          sx={{
+            color: "text",
+            backgroundColor: "background",
+            border: `2px solid ${white}`,
+          }}
           onClick={() => setShowProject(!showProject)}
         >
           {showProject ? "hide" : "show"}
