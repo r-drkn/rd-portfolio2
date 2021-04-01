@@ -51,52 +51,17 @@ export default function ProjectCardItem(props) {
     <div
       className={project.title.replace(/\s+/g, "")}
       sx={{
-        height: showProject ? ["85vh", "50vh"] : ["10vh", "10vh"],
         width: "100%",
         display: "flex",
-        flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
         overflow: "hidden",
+        mt: "2rem",
         mb: ["6rem", "2rem"],
         p: "1rem",
       }}
     >
-      <div
-        sx={{
-          width: "100%",
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          visibility: "hidden",
-        }}
-        ref={(el) => (title = el)}
-      >
-        <h1
-          sx={{
-            margin: 0,
-            padding: 0,
-            fontWeight: 600,
-            textTransform: "uppercase",
-            fontSize: ["2rem", "2rem"],
-            letterSpacing: "2px",
-          }}
-        >
-          {project.title}
-        </h1>
-        <button
-          sx={{
-            color: "text",
-            backgroundColor: "background",
-            border: `2px solid ${white}`,
-            p: " 0.5rem 1rem",
-          }}
-          onClick={() => setShowProject(!showProject)}
-        >
-          {showProject ? "hide" : "show"}
-        </button>
-      </div>
-      {showProject && (
+      {showProject ? (
         <>
           <div
             sx={{
@@ -106,11 +71,47 @@ export default function ProjectCardItem(props) {
               width: "100%",
               display: "grid",
               gridTemplate: [
-                "repeat(16,2rem) / repeat(10,1fr)",
+                "4rem repeat(15,2rem) / repeat(10,1fr)",
                 "repeat(10,2rem) / repeat(10,1fr)",
               ],
             }}
           >
+            <div
+              sx={{
+                width: "100%",
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "center",
+                visibility: "hidden",
+                gridArea: "1 / 1 / 2 / 11",
+              }}
+              ref={(el) => (title = el)}
+            >
+              <h1
+                sx={{
+                  margin: 0,
+                  padding: 0,
+                  fontWeight: 600,
+                  textTransform: "uppercase",
+                  fontSize: ["2rem", "2rem"],
+                  letterSpacing: "2px",
+                }}
+              >
+                {project.title}
+              </h1>
+              <button
+                sx={{
+                  color: "text",
+                  backgroundColor: "background",
+                  border: `2px solid ${white}`,
+                  p: " 0.5rem 1rem",
+                  m: 0,
+                }}
+                onClick={() => setShowProject(!showProject)}
+              >
+                {showProject ? "hide" : "show"}
+              </button>
+            </div>
             <div
               ref={(el) => (tech = el)}
               sx={{
@@ -187,6 +188,42 @@ export default function ProjectCardItem(props) {
             </div>
           </div>
         </>
+      ) : (
+        <div
+          sx={{
+            width: "100%",
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            visibility: "hidden",
+          }}
+          ref={(el) => (title = el)}
+        >
+          <h1
+            sx={{
+              margin: 0,
+              padding: 0,
+              fontWeight: 600,
+              textTransform: "uppercase",
+              fontSize: ["2rem", "2rem"],
+              letterSpacing: "2px",
+            }}
+          >
+            {project.title}
+          </h1>
+          <button
+            sx={{
+              color: "text",
+              backgroundColor: "background",
+              border: `2px solid ${white}`,
+              p: " 0.5rem 1rem",
+              m: 0,
+            }}
+            onClick={() => setShowProject(!showProject)}
+          >
+            {showProject ? "hide" : "show"}
+          </button>
+        </div>
       )}
     </div>
   );

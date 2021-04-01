@@ -7,11 +7,9 @@ export let projectsAnimate = {
   natural: {
     scrollTrigger: {
       trigger: ".project",
-      scrub: 1,
+      // scrub: 1,
       start: "top bottom",
-      end: "bottom bottom",
       id: "natural",
-      once: true,
     },
     xPercent: -20,
     autoAlpha: 0,
@@ -20,11 +18,10 @@ export let projectsAnimate = {
   alt: {
     scrollTrigger: {
       trigger: ".project",
-      scrub: 1,
+      // scrub: 1,
       start: "top bottom",
-      end: "bottom bottom",
+      // end: "bottom bottom",
       id: "alt",
-      once: true,
     },
     xPercent: 20,
     autoAlpha: 0,
