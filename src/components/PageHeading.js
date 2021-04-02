@@ -40,7 +40,7 @@ export default function PageHeading(props) {
         display: "flex",
         position: "relative",
         alignItems: "center",
-        justifyContent: "space-between",
+        justifyContent: "center",
         px: "0.5rem",
       }}
     >

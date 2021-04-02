@@ -26,7 +26,6 @@ export default function Landing(props) {
       .from(heading, landingAnimate.heading)
       .from(byline, landingAnimate.byline)
       .from(description, landingAnimate.description)
-      .fromTo(".meSVG", { autoAlpha: 0 }, { autoAlpha: 1, duration: 1 });
   }, []);
 
   return (
@@ -36,11 +35,11 @@ export default function Landing(props) {
         maxWidth: "900px",
         height: "90vh",
         display: "grid",
-        gridTemplate: "repeat(9, 1fr) / repeat(16, 1fr)",
+        gridTemplate: "repeat(9, 1fr) / repeat(16, 5.625vh)",
         flexDirection: "column",
         fontFamily: "primary",
         letterSpacing: "2px",
-        p: "1rem",
+        p: "2rem",
         pb: "2rem",
       }}
     >
