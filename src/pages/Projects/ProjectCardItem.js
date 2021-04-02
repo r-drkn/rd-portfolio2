@@ -30,20 +30,12 @@ export default function ProjectCardItem(props) {
       image.style.visibility = "visible";
 
       tl.current
-        .from(
-          title,
-          alt ? projectsAnimate.alt : projectsAnimate.natural,
-          "forwards"
-        )
+        .from(title, projectsAnimate.title, "forwards")
         .from(image, alt ? projectsAnimate.alt : projectsAnimate.natural)
         .from(description, alt ? projectsAnimate.natural : projectsAnimate.alt)
         .from(tech, alt ? projectsAnimate.natural : projectsAnimate.alt);
     } else {
-      tl.current.from(
-        title,
-        alt ? projectsAnimate.alt : projectsAnimate.natural,
-        "forwards"
-      );
+      tl.current.from(title, projectsAnimate.title, "forwards");
     }
   }, [project.title, alt, showProject]);
 
@@ -91,7 +83,7 @@ export default function ProjectCardItem(props) {
                 sx={{
                   margin: 0,
                   padding: 0,
-                  fontWeight: 600,
+                  fontWeight: 400,
                   textTransform: "uppercase",
                   fontSize: ["2rem", "2rem"],
                   letterSpacing: "2px",
@@ -105,7 +97,6 @@ export default function ProjectCardItem(props) {
                   backgroundColor: "background",
                   border: `2px solid ${white}`,
                   p: " 0.5rem 1rem",
-                  m: 0,
                 }}
                 onClick={() => setShowProject(!showProject)}
               >
@@ -139,7 +130,8 @@ export default function ProjectCardItem(props) {
                 gridArea: alt
                   ? ["3 / 1 / 10 / 11", "2 / 1 / 11 / 7"]
                   : ["3 / 1 / 10 / 11", "2 / 5 / 10 / 12"],
-                px: ["0rem", "1rem"],
+                pl: alt ? "0rem" : "1rem",
+                pr: alt ? "1rem" : "0rem",
               }}
             >
               {project.image && (
@@ -158,8 +150,8 @@ export default function ProjectCardItem(props) {
               ref={(el) => (description = el)}
               sx={{
                 gridArea: alt
-                  ? ["11 / 1 / 17 / 10", "4 / 6 / 8 / 11"]
-                  : ["11 / 2 / 17 / 11", "4 / 1 / 8 / 6"],
+                  ? ["11 / 1 / 17 / 10", "4 / 7 / 8 / 11"]
+                  : ["11 / 2 / 17 / 11", "4 / 1 / 11 / 5"],
               }}
             >
               <p
@@ -196,6 +188,9 @@ export default function ProjectCardItem(props) {
             justifyContent: "space-between",
             alignItems: "center",
             visibility: "hidden",
+            pr: "1rem",
+            pl: "1rem",
+            pt: "2rem",
           }}
           ref={(el) => (title = el)}
         >
@@ -203,10 +198,11 @@ export default function ProjectCardItem(props) {
             sx={{
               margin: 0,
               padding: 0,
-              fontWeight: 600,
+              fontWeight: 400,
               textTransform: "uppercase",
               fontSize: ["2rem", "2rem"],
               letterSpacing: "2px",
+              fontFamily: "primary",
             }}
           >
             {project.title}
@@ -216,7 +212,7 @@ export default function ProjectCardItem(props) {
               color: "text",
               backgroundColor: "background",
               border: `2px solid ${white}`,
-              p: " 0.5rem 1rem",
+              p: [" 0.5rem 1rem", " 0.5rem 1rem"],
               m: 0,
             }}
             onClick={() => setShowProject(!showProject)}

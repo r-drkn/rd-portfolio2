@@ -26,6 +26,7 @@ export default function About() {
 
   return (
     <div
+      id="about"
       sx={{
         fontFamily: "primary",
         maxWidth: "900px",
