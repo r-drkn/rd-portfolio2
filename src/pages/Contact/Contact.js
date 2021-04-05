@@ -63,7 +63,6 @@ export default function Contact() {
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
-          height: "100vh",
           maxWidth: "900px",
           width: "100%",
           pt: "10vh",
@@ -97,9 +96,7 @@ export default function Contact() {
 
         <div>
           <p sx={{ fontSize: "2rem", textAlign: "center", pb: "2rem" }}>
-            Please don't hesitate to reach out about any opportunities
-            regardless how big or small always looking for new projects,
-            collaborations or even just chats about web things!
+            Currently looking for entry level web developer opportunities!
           </p>
         </div>
         <svg
