@@ -8,7 +8,7 @@ export default function MainContainer({ children }) {
   return (
     <main
       sx={{
-        // position: "relative",
+        position: "relative",
         width: "100%",
         height: "100%",
         maxWidth: "1280px",

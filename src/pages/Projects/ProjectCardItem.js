@@ -86,7 +86,7 @@ export default function ProjectCardItem(props) {
                   padding: 0,
                   fontWeight: 400,
                   textTransform: "uppercase",
-                  fontSize: ["2rem", "2rem"],
+                  fontSize: ["1.5rem", "2rem"],
                   letterSpacing: "2px",
                 }}
               >
@@ -101,12 +101,13 @@ export default function ProjectCardItem(props) {
               ref={(el) => (tech = el)}
               sx={{
                 gridArea: alt
-                  ? ["2 / 1 / 3 / 10", "3 / 7 / 4 / 11"]
-                  : ["2 / 2 / 3 / 11", "3 / 1 / 4 / 5"],
+                  ? ["1 / 1 / 3 / 10", "3 / 7 / 4 / 11"]
+                  : ["2 / 1 / 3 / 11", "3 / 1 / 4 / 5"],
                 display: "flex",
                 alignItems: "center",
                 fontFamily: "code",
                 fontSize: "0.8rem",
+                pt: "0.5rem",
               }}
             >
               {project.techStack.map((tech, index) => {
@@ -124,8 +125,8 @@ export default function ProjectCardItem(props) {
                 gridArea: alt
                   ? ["3 / 1 / 10 / 11", "2 / 1 / 11 / 7"]
                   : ["3 / 1 / 10 / 11", "2 / 5 / 10 / 12"],
-                pl: alt ? "0rem" : "1rem",
-                pr: alt ? "1rem" : "0rem",
+                pl: alt ? "0rem" : ["0rem", "1rem"],
+                pr: alt ? ["0rem", "1rem"] : "0rem",
               }}
             >
               {project.image && (
@@ -145,8 +146,8 @@ export default function ProjectCardItem(props) {
               ref={(el) => (description = el)}
               sx={{
                 gridArea: alt
-                  ? ["11 / 1 / 17 / 10", "4 / 7 / 8 / 11"]
-                  : ["11 / 2 / 17 / 11", "4 / 1 / 11 / 5"],
+                  ? ["11 / 1 / 17 / 11", "4 / 7 / 8 / 11"]
+                  : ["11 / 1 / 17 / 11", "4 / 1 / 11 / 5"],
               }}
             >
               <p
@@ -196,7 +197,7 @@ export default function ProjectCardItem(props) {
               padding: 0,
               fontWeight: 400,
               textTransform: "uppercase",
-              fontSize: ["2rem", "2rem"],
+              fontSize: ["1.5rem", "2rem"],
               letterSpacing: "2px",
               fontFamily: "primary",
             }}
