@@ -162,7 +162,6 @@ export default function ProjectCardItem(props) {
                   fontWeight: 300,
                   backgroundColor: "none",
                   color: "white",
-                  // textAlign: "justify",
                   border: `1px solid ${white}`,
                   fontSize: ["1rem", "1.2rem"],
                 }}
