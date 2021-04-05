@@ -7,6 +7,7 @@ import ProjectCardItem from "./ProjectCardItem";
 import catalogWebsite from "../../images/catalog-website.png";
 import portfolioWebsite from "../../images/portfolio-website.png";
 import PageHeading from "../../components/PageHeading";
+import MainContainer from "../../components/MainContainer";
 
 export default function Projects() {
   const projects = [
@@ -53,22 +54,24 @@ export default function Projects() {
   ];
 
   return (
-    <div id="projects" sx={{ paddingTop: "10vh", maxWidth: "900px" }}>
-      <PageHeading pageTitle="My Projects:" />
-      <div sx={{ mt: "7rem" }}>
-        {projects.map((project, index) => {
-          const alt = (index + 1) % 2 === 0;
+    <MainContainer>
+      <div id="projects" sx={{ paddingTop: "10vh", maxWidth: "900px" }}>
+        <PageHeading pageTitle="My Projects:" />
+        <div sx={{ mt: "7rem" }}>
+          {projects.map((project, index) => {
+            const alt = (index + 1) % 2 === 0;
 
-          return (
-            <ProjectCardItem
-              project={project}
-              alt={alt}
-              key={project.title}
-              hidden={index < 2}
-            />
-          );
-        })}
+            return (
+              <ProjectCardItem
+                project={project}
+                alt={alt}
+                key={project.title}
+                hidden={index < 2}
+              />
+            );
+          })}
+        </div>
       </div>
-    </div>
+    </MainContainer>
   );
 }

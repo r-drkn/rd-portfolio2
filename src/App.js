@@ -5,7 +5,7 @@ import Landing from "./pages/Landing/Landing";
 import Nav from "./components/Nav/Nav";
 import Projects from "./pages/Projects/Projects";
 import About from "./pages/About/About";
-import MainContainer from "./components/MainContainer";
+// import MainContainer from "./components/MainContainer";
 import Contact from "./pages/Contact/Contact";
 
 function App() {
@@ -13,12 +13,10 @@ function App() {
     <div>
       <ThemeProvider theme={theme}>
         <Nav />
-        <MainContainer>
-          <Landing />
-          <About />
-          <Projects />
-          <Contact />
-        </MainContainer>
+        <Landing />
+        <About />
+        <Projects />
+        <Contact />
       </ThemeProvider>
     </div>
   );

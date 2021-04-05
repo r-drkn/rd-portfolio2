@@ -8,11 +8,11 @@ export default function MainContainer({ children }) {
   return (
     <main
       sx={{
-        width: "100%",
-        maxWidth: "1280px",
-        paddingTop: "10vh",
-        mx: "auto",
         position: "relative",
+        width: "100%",
+        height: "100%",
+        maxWidth: "1280px",
+        mx: "auto",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",

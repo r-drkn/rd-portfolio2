@@ -21,6 +21,7 @@ export default function Nav() {
   const navItems = ["home", "about", "projects", "contact"];
 
   const isMobile = useMediaQuery(theme.mobile);
+  const isTablet = useMediaQuery(theme.tablet);
 
   useEffect(() => {
     const showNav = gsap
@@ -79,7 +80,7 @@ export default function Nav() {
           RB:DK
         </button>
         <div>
-          {isMobile ? (
+          {isMobile || isTablet ? (
             <>
               <MenuIcon showMenu={showMenu} setShowMenu={setShowMenu} />
               <NavDrawer showMenu={showMenu} current={current}>
