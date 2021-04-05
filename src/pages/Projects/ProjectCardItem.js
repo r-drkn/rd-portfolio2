@@ -142,6 +142,7 @@ export default function ProjectCardItem(props) {
                     boxSizing: "border-box",
                     width: "100%",
                     height: "100%",
+                    border: `1px solid ${white}`,
                   }}
                 ></img>
               )}
@@ -159,9 +160,10 @@ export default function ProjectCardItem(props) {
                   m: 0,
                   p: "1rem",
                   fontWeight: 300,
-                  backgroundColor: "primary",
+                  backgroundColor: "none",
                   color: "white",
-                  textAlign: "justify",
+                  // textAlign: "justify",
+                  border: `1px solid ${white}`,
                   fontSize: ["1rem", "1.2rem"],
                 }}
               >
@@ -170,11 +172,12 @@ export default function ProjectCardItem(props) {
               <div
                 sx={{
                   display: "flex",
+                  justifyContent: "flex-end",
                   alignItems: "center",
                   pt: "1rem",
                 }}
               >
-                <span sx={{ pl: "0.5rem", color: "text" }}>WebLink</span>
+                <span sx={{ color: "text" }}>WebLink</span>
                 <span sx={{ pl: "0.5rem", color: "text" }}>GitLink</span>
               </div>
             </div>

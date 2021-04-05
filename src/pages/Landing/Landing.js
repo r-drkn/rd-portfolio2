@@ -25,7 +25,7 @@ export default function Landing(props) {
     tl.current
       .from(heading, landingAnimate.heading)
       .from(byline, landingAnimate.byline)
-      .from(description, landingAnimate.description)
+      .from(description, landingAnimate.description);
   }, []);
 
   return (
@@ -35,7 +35,7 @@ export default function Landing(props) {
         maxWidth: "900px",
         height: "90vh",
         display: "grid",
-        gridTemplate: "repeat(9, 1fr) / repeat(16, 5.625vh)",
+        gridTemplate: "repeat(10, 9vh) / repeat(16, 1fr)",
         flexDirection: "column",
         fontFamily: "primary",
         letterSpacing: "2px",
@@ -71,7 +71,7 @@ export default function Landing(props) {
         sx={{
           visibility: "hidden",
           fontSize: ["3rem", "5rem"],
-          gridArea: ["1 / 1 / 4 / 12", "1 / 1 / 4 / 10"],
+          gridArea: ["1 / 1 / 4 / 16", "1 / 1 / 4 / 16"],
           padding: 0,
           margin: 0,
           display: "flex",
@@ -88,7 +88,7 @@ export default function Landing(props) {
           visibility: "hidden",
           fontSize: ["1.5rem", " 2.5rem"],
           padding: 0,
-          gridArea: "4/ 1 / 6 / 11",
+          gridArea: ["4/ 1 / 5 / 16", "5 / 1 / 6 / 16"],
           fontWeight: "600",
           display: "flex",
           justifyContent: "center",
@@ -96,7 +96,7 @@ export default function Landing(props) {
           lineHeight: "4rem",
         }}
       >
-        <span sx={{ fontSize: ["2rem", "3rem"] }}>I make things</span> <br />
+        <span sx={{ fontSize: ["2rem", "3rem"] }}>I make things</span>
         on the internet.
       </h2>
 
@@ -104,8 +104,8 @@ export default function Landing(props) {
         ref={(el) => (description = el)}
         sx={{
           visibility: "hidden",
-          gridArea: ["7 / 1 / 8 / 12 ", "7 / 1 / 8 / 8 "],
-          fontSize: "1.2rem",
+          gridArea: ["6 / 1 / 9 / 16 ", "7 / 1 / 10 / 9 "],
+          fontSize: ["3vh", "3vh"],
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
@@ -115,7 +115,7 @@ export default function Landing(props) {
           sx={{
             m: 0,
             color: "third",
-            lineHeight: "2rem",
+            lineHeight: ["1.5rem", "2rem"],
           }}
         >
           I'm a Junior Web Developer living in Brisbane with a particular
