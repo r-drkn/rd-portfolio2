@@ -7,6 +7,7 @@ import { jsx } from "theme-ui";
 import { projectsAnimate } from "./projectsAnimate.js";
 import gsap from "gsap";
 import theme from "../../theme";
+import CustomButton from "../../components/CustomButton.js";
 
 export default function ProjectCardItem(props) {
   const { project, alt, hidden } = props;
@@ -91,17 +92,10 @@ export default function ProjectCardItem(props) {
               >
                 {project.title}
               </h1>
-              <button
-                sx={{
-                  color: "text",
-                  backgroundColor: "background",
-                  border: `2px solid ${white}`,
-                  p: " 0.5rem 1rem",
-                }}
-                onClick={() => setShowProject(!showProject)}
-              >
-                {showProject ? "hide" : "show"}
-              </button>
+              <CustomButton
+                showProject={showProject}
+                setShowProject={setShowProject}
+              />
             </div>
             <div
               ref={(el) => (tech = el)}
@@ -209,7 +203,11 @@ export default function ProjectCardItem(props) {
           >
             {project.title}
           </h1>
-          <button
+          <CustomButton
+            showProject={showProject}
+            setShowProject={setShowProject}
+          />
+          {/* <button
             sx={{
               color: "text",
               backgroundColor: "background",
@@ -220,7 +218,7 @@ export default function ProjectCardItem(props) {
             onClick={() => setShowProject(!showProject)}
           >
             {showProject ? "hide" : "show"}
-          </button>
+          </button> */}
         </div>
       )}
     </div>

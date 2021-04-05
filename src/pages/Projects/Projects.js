@@ -25,17 +25,11 @@ export default function Projects() {
       image: portfolioWebsite,
     },
     {
-      title: "Recipe Hackathon",
+      title: "Orbis Foods",
       description:
         "Three day Hackathon where my partner and I built a user uploaded recipe database accessible via a global map. The idea was for a product where the geographic locality of recipes could be centralized and users could upload their local dishes",
       techStack: ["Javascript", "Node.js", "Handlebars", "Mapbox"],
       image: "",
-    },
-    {
-      title: "Portfolio V1",
-      description:
-        "My original portfolio built as one of my first projects using HTML and CSS. Through-out this project I mastered the foundations of HTML/CSS including positioning, flexbox and grid. On top of this I experimented with SVG Path animation.",
-      techStack: ["HTML/CSS", "SVG Animation"],
     },
     {
       title: "VLX Records",
@@ -43,6 +37,13 @@ export default function Projects() {
         "An early attempt at a project in Rails to build out a marketplace for users to buy and sell vinyl records. Here I learned about MVC methodoligies aswell as the intriciacies of auth, validation and test driven development.",
       techStack: ["Ruby", "Rails", "Tailwind CSS"],
     },
+    {
+      title: "Portfolio V1",
+      description:
+        "My original portfolio built as one of my first projects using HTML and CSS. Through-out this project I mastered the foundations of HTML/CSS including positioning, flexbox and grid. On top of this I experimented with SVG Path animation.",
+      techStack: ["HTML/CSS", "SVG Animation"],
+    },
+
     {
       title: "Butterfly Budgeting",
       description:
