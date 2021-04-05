@@ -33,7 +33,7 @@ export default function About() {
           fontFamily: "primary",
           maxWidth: "900px",
           p: "1rem",
-          pt: "10vh",
+          py: "20vh",
         }}
       >
         <div ref={(el) => (aboutHeader = el)}>
