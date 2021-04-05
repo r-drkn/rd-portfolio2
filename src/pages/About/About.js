@@ -41,7 +41,7 @@ export default function About() {
         sx={{
           width: "100%",
           fontSize: "1.2rem",
-          textAlign: "justify",
+          // textAlign: "justify",
           padding: [null, "2rem"],
           mt: "2rem",
           p: {
@@ -75,7 +75,7 @@ export default function About() {
           </div>
         </p>
         <p className="aboutItems">
-          Tech I’m actively incorporating into my skill set: <br />
+          Tech I’m currently incorporating into my skill set: <br />
           <div sx={{ pl: "1rem", fontFamily: "code", color: "third" }}>
             Next.JS, Typescript, A11y
           </div>

@@ -12,19 +12,19 @@ import resume from "../../icons/resume.svg";
 import resumeFile from "../../images/RobertDirkenResumé.pdf";
 
 const contactListItems = [
-  { item: "Github", url: "https://github.com/r-drkn", image: github },
+  { item: "Mail", url: "mailto:robert.dirken@gmail.com", image: mail },
   {
     item: "LinkedIn",
     url: "https://www.linkedin.com/in/robert-dirken-5796711a5/",
     image: linkedin,
   },
+  { item: "Github", url: "https://github.com/r-drkn", image: github },
+  { item: "Resumé", image: resume, url: resumeFile },
   {
     item: "CodePen",
     url: "https://codepen.io/r_drkn",
     image: codepen,
   },
-  { item: "Mail", url: "mailto:robert.dirken@gmail.com", image: mail },
-  { item: "Resumé", image: resume, url: resumeFile },
 ];
 
 function ContactListItem(props) {
