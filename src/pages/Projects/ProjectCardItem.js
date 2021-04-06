@@ -171,8 +171,29 @@ export default function ProjectCardItem(props) {
                   pt: "1rem",
                 }}
               >
-                <span sx={{ color: "text" }}>WebLink</span>
-                <span sx={{ pl: "0.5rem", color: "text" }}>GitLink</span>
+                <a
+                  href={project.links[0]}
+                  target="_blank"
+                  rel="noreferrer"
+                  sx={{
+                    pr: "0.5rem",
+                    color: "text",
+                    fontFamily: "code",
+                    fontWeight: 200,
+                  }}
+                >
+                  Git Repo
+                </a>
+                {project.links.length > 1 && (
+                  <a
+                    href={project.links[1]}
+                    target="_blank"
+                    rel="noreferrer"
+                    sx={{ color: "text", fontFamily: "code", fontWeight: 200 }}
+                  >
+                    Live Site
+                  </a>
+                )}
               </div>
             </div>
           </div>
