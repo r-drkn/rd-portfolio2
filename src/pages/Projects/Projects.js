@@ -73,7 +73,7 @@ export default function Projects() {
 
   return (
     <MainContainer>
-      <div id="projects" sx={{ py: "20vh", maxWidth: "900px" }}>
+      <div id="projects" sx={{ py: "10vh", my: "10vh", maxWidth: "900px" }}>
         <PageHeading pageTitle="My Projects:" />
         <div sx={{ mt: "7rem" }}>
           {projects.map((project, index) => {

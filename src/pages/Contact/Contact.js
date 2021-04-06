@@ -65,9 +65,10 @@ export default function Contact() {
           alignItems: "center",
           maxWidth: "900px",
           width: "100%",
-          pt: "20vh",
+          py: "10vh",
+          my: "10vh",
           px: "1rem",
-          pb: "10vh",
+          pb: "0vh",
         }}
       >
         <PageHeading pageTitle="Get in touch!" />

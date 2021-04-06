@@ -72,6 +72,7 @@ export default function Nav() {
             backgroundColor: "rgba(003, 025, 038, 0)",
             border: "none",
             color: "white",
+            cursor: "pointer",
           }}
           onClick={() => {
             window.scrollTo(0, 0);
