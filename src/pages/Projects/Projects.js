@@ -6,6 +6,10 @@ import { jsx } from "theme-ui";
 import ProjectCardItem from "./ProjectCardItem";
 import catalogWebsite from "../../images/catalog-website.png";
 import portfolioWebsite from "../../images/portfolio-website.png";
+import butterflyBudgeting from "../../images/butterfly-budgeting.png";
+import orbisFoods from "../../images/orbisFoods.png";
+import vlxWebsite from "../../images/vlxWebsite.png";
+import portfolio1 from "../../images/portfolio1.png";
 import PageHeading from "../../components/PageHeading";
 import MainContainer from "../../components/MainContainer";
 
@@ -38,7 +42,7 @@ export default function Projects() {
       description:
         "Three day Hackathon where my partner and I built a user uploaded recipe database accessible via a global map. The idea was for a product where the geographic locality of recipes could be centralized and users could upload their local dishes",
       techStack: ["Javascript", "Node.js", "Handlebars", "Mapbox"],
-      image: "",
+      image: orbisFoods,
       links: ["https://github.com/r-drkn/recipe-hackathon"],
     },
     {
@@ -46,6 +50,7 @@ export default function Projects() {
       description:
         "An early attempt at a project in Rails to build out a marketplace for users to buy and sell vinyl records. Here I learned about MVC methodoligies aswell as the intriciacies of auth, validation and test driven development.",
       techStack: ["Ruby", "Rails", "Tailwind CSS"],
+      image: vlxWebsite,
       links: [
         "https://github.com/r-drkn/RecordBoxApp",
         "https://protected-fjord-31270.herokuapp.com/",
@@ -60,6 +65,7 @@ export default function Projects() {
         "https://github.com/r-drkn/portfolio",
         "https://robertdirken.netlify.app/",
       ],
+      image: portfolio1,
     },
 
     {
@@ -67,6 +73,7 @@ export default function Projects() {
       description:
         "A cute little project built in Ruby for Terminal. The app uses user entered data to create a personal budget with a breakdown of savings targets.",
       techStack: ["Ruby", "Command Line"],
+      image: butterflyBudgeting,
       links: ["https://github.com/r-drkn/budget-terminal-app"],
     },
   ];
