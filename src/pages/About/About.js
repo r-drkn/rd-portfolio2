@@ -2,27 +2,18 @@
 /** @jsx jsx */
 // eslint-disable-next-line
 import React from "react";
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 import { jsx } from "theme-ui";
 import PageHeading from "../../components/PageHeading";
 import gsap from "gsap";
+import { animate } from "./aboutAnimate";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import MainContainer from "../../components/MainContainer";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function About() {
-  let aboutHeader = useRef(null);
-
   useEffect(() => {
-    gsap.from(".aboutItems", {
-      scrollTrigger: {
-        trigger: aboutHeader,
-        start: "top 50%",
-      },
-      autoAlpha: 0,
-      y: 50,
-      stagger: 0.5,
-    });
+    gsap.from(".aboutItems", animate.aboutItems);
   }, []);
 
   return (
@@ -33,13 +24,9 @@ export default function About() {
           fontFamily: "primary",
           maxWidth: "900px",
           p: "1rem",
-          py: "10vh",
-          my: "10vh",
         }}
       >
-        <div ref={(el) => (aboutHeader = el)}>
-          <PageHeading pageTitle="A bit about me:" />
-        </div>
+        <PageHeading pageTitle="A bit about me:" />
         <div
           sx={{
             width: "100%",

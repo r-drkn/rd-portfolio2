@@ -29,16 +29,9 @@ export default function CustomButton(props) {
       ref={(el) => (button = el)}
       sx={{
         color: "text",
-        // backgroundColor: "background",
         border: `2px solid ${white}`,
         p: [" 0.5rem 1rem", " 0.5rem 1rem"],
         m: 0,
-        // backgroundColor: hover
-        //   ? theme.colors.secondary
-        //   : theme.colors.background,
-        // "&: hover": {
-        //   backgroundColor: theme.colors.secondary,
-        // },
       }}
       onClick={() => setShowProject(!showProject)}
       onMouseEnter={() => setHover(true)}

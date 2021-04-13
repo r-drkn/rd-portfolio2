@@ -2,14 +2,17 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
-export const aboutAnimate = {
-  aboutHeading: {
+export const animate = {
+  aboutItems: {
     scrollTrigger: {
-        
+      trigger: "#about",
+      start: "top center",
+      end: "center center",
+      scrub: true,
+      id: "aboutitems",
     },
-    xPercent: -20,
     autoAlpha: 0,
-    duration: 1,
-    ease: "ease",
+    y: 50,
+    stagger: 0.5,
   },
 };

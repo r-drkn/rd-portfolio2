@@ -1,7 +1,8 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 // eslint-disable-next-line
-import React from "react";
+import gsap from "gsap";
+import React, { useEffect, useRef } from "react";
 import { jsx } from "theme-ui";
 import MainContainer from "../../components/MainContainer";
 import PageHeading from "../../components/PageHeading";
@@ -12,6 +13,7 @@ import mail from "../../icons/mail.svg";
 import resume from "../../icons/resume.svg";
 import resumeFile from "../../images/RobertDirkenResumé.pdf";
 import theme from "../../theme";
+import ContactListItem from "./ContactListItem";
 
 const contactListItems = [
   { item: "Mail", url: "mailto:robert.dirken@gmail.com", image: mail },
@@ -29,31 +31,21 @@ const contactListItems = [
   },
 ];
 
-function ContactListItem(props) {
-  const { url, item, image, download } = props;
-  return (
-    <li className="listItem" key={item}>
-      <a href={url} target="_blank" rel="noreferrer" download={download}>
-        <div
-          sx={{
-            color: "white",
-            display: "flex",
-            justifyContent: "space-evenly",
-            flexDirection: "column",
-            alignItems: "center",
-            fontFamily: "code",
-          }}
-        >
-          <img sx={{ width: "3rem" }} src={image} alt={item} />
-          <h3>{item}</h3>
-        </div>
-      </a>
-    </li>
-  );
-}
-
 export default function Contact() {
   const { secondary } = theme.colors;
+  let header = useRef(null);
+
+  useEffect(() => {
+    gsap.from(".icons", {
+      scrollTrigger: {
+        trigger: header,
+        start: "top 50%",
+        end: "bottom 50%",
+      },
+      yPercent: 100,
+      autoAlpha: 0,
+    });
+  }, []);
 
   return (
     <MainContainer>
@@ -71,8 +63,11 @@ export default function Contact() {
           pb: "0vh",
         }}
       >
-        <PageHeading pageTitle="Get in touch!" />
+        <div ref={(el) => (header = el)}>
+          <PageHeading pageTitle="Get in touch!" />
+        </div>
         <ul
+          className="icons"
           sx={{
             p: "2rem",
             pt: "5rem",
