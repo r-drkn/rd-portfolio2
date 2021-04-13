@@ -1,7 +1,7 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-// eslint-disable-next-line
 import gsap from "gsap";
+// eslint-disable-next-line
 import React, { useEffect, useRef } from "react";
 import { jsx } from "theme-ui";
 import MainContainer from "../../components/MainContainer";
@@ -52,15 +52,14 @@ export default function Contact() {
       <div
         id="contact"
         sx={{
+          height: ["100%", "100vh"],
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
           maxWidth: "900px",
           width: "100%",
-          py: "10vh",
-          my: "10vh",
           px: "1rem",
-          pb: "0vh",
+          pt: "10vh",
         }}
       >
         <div ref={(el) => (header = el)}>
@@ -69,8 +68,7 @@ export default function Contact() {
         <ul
           className="icons"
           sx={{
-            p: "2rem",
-            pt: "5rem",
+            py: "10vh",
             width: "100%",
             listStyle: "none",
             display: "flex",
@@ -92,7 +90,7 @@ export default function Contact() {
         </ul>
 
         <div>
-          <p sx={{ fontSize: "2rem", textAlign: "center", pb: "2rem" }}>
+          <p sx={{ fontSize: "2rem", textAlign: "center", py: "3vh" }}>
             Currently looking for entry level web developer opportunities!
           </p>
         </div>
@@ -106,10 +104,10 @@ export default function Contact() {
           <path
             d="M4 14C12.3333 0.666667 20.6667 0.666667 29 14C37.3333 27.3333 45.6667 27.3333 54 14C62.3333 0.666667 70.6667 0.666667 79 14C87.3333 27.3333 95.6667 27.3333 104 14C112.333 0.666667 120.667 0.666667 129 14C137.333 27.3333 145.667 27.3333 154 14C162.333 0.666667 170.667 0.666667 179 14C187.333 27.3333 195.667 27.3333 204 14C212.333 0.666667 220.667 0.666667 229 14C237.333 27.3333 245.667 27.3333 254 14C262.333 0.666667 270.667 0.666667 279 14"
             stroke={secondary}
-            stroke-width="8"
+            strokeWidth="8"
           />
         </svg>
-        <h4 sx={{ fontFamily: "code", fontWeight: 200, py: "4rem" }}>
+        <h4 sx={{ fontFamily: "code", fontWeight: 200 }}>
           Copyright© Robert Dirken 2021
         </h4>
       </div>
