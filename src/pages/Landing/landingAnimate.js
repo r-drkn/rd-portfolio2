@@ -5,6 +5,12 @@ export const landingAnimate = {
     duration: 1,
     ease: "ease",
   },
+  squiggle: {
+    animation: "squiggle 2s ease",
+    "@keyframes squiggle":{
+      
+    }
+  },
   byline: {
     xPercent: -20,
     autoAlpha: 0,

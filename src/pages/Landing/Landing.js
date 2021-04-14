@@ -16,8 +16,8 @@ export default function Landing(props) {
   let heading = useRef(null);
   let byline = useRef(null);
   let description = useRef(null);
+  let squiggle = useRef(null);
   let tl = useRef(gsap.timeline());
-  // const { primary } = theme.colors;
   const isMobile = useMediaQuery(theme.mobile);
 
   useEffect(() => {
@@ -26,6 +26,7 @@ export default function Landing(props) {
     description.style.visibility = "visible";
     tl.current
       .from(heading, landingAnimate.heading)
+      .from(squiggle, landingAnimate.squiggle)
       .from(byline, landingAnimate.byline)
       .from(description, landingAnimate.description);
   }, []);
@@ -137,17 +138,6 @@ export default function Landing(props) {
               borderRadius: "50%",
             }}
           >
-            {/* <img
-              src={selfie}
-              alt="Robert Dirken"
-              sx={{
-                width: "100%",
-                height: "100%",
-                m: 0,
-                boxShadow: "0px 2px 2px 2px #F21365",
-                borderRadius: "50%",
-              }}
-            ></img> */}
             <svg
               width="100%"
               height="100%"
@@ -156,10 +146,11 @@ export default function Landing(props) {
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
+                ref={(el) => (squiggle = el)}
                 d="M332.774 98.6651C570.526 56.0106 572.955 66.7239 340.063 130.805C38.5531 212.098 40.9827 222.812 347.352 162.945C654.077 104.648 656.507 115.361 354.641 195.085C127.535 256.464 129.964 267.178 361.93 227.225C593.595 185.95 596.025 196.664 369.219 259.365C45.5536 346.424 47.9833 357.138 376.507 291.505C705.548 228.147 707.977 238.86 383.796 323.645C3.02484 422.242 5.45447 432.956 391.085 355.784C776.927 279.545 779.357 290.258 398.374 387.924C96.2575 466.542 98.6872 477.256 405.663 420.064C712.388 361.767 714.818 372.481 412.952 452.204C187.866 513.088 190.296 523.801 420.241 484.344C649.878 443.53 652.307 454.243 427.53 516.484C27.2042 622.912 29.6339 633.625 434.819 548.624C840.947 467.784 843.377 478.497 442.108 580.764C113.65 665.499 116.079 676.213 449.396 612.904"
                 stroke="#F2F2F2"
-                stroke-width="50"
-                stroke-linecap="round"
+                strokeWidth="50"
+                strokeLinecap="round"
               />
               <LandingImage />
             </svg>

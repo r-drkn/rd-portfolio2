@@ -52,14 +52,13 @@ export default function Contact() {
       <div
         id="contact"
         sx={{
-          height: ["100%", "100vh"],
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
           maxWidth: "900px",
           width: "100%",
           px: "1rem",
-          pt: "10vh",
+          py: "10vh",
         }}
       >
         <div ref={(el) => (header = el)}>
@@ -68,7 +67,7 @@ export default function Contact() {
         <ul
           className="icons"
           sx={{
-            py: "10vh",
+            pt: "10vh",
             width: "100%",
             listStyle: "none",
             display: "flex",

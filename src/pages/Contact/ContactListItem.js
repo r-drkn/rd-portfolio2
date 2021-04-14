@@ -1,15 +1,15 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-// eslint-disable-next-line
 import gsap from "gsap";
+// eslint-disable-next-line
 import React, { useEffect, useRef, useState } from "react";
-import { Heading, jsx } from "theme-ui";
+import { jsx } from "theme-ui";
 import theme from "../../theme";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function ContactListItem(props) {
-  const { url, item, image, download, container } = props;
+  const { url, item, image, download } = props;
   const [hover, setHover] = useState(false);
   let icon = useRef(null);
 
