@@ -24,6 +24,7 @@ export default function About() {
           fontFamily: "primary",
           maxWidth: "900px",
           p: "1rem",
+          py: "10vh",
         }}
       >
         <PageHeading pageTitle="A bit about me:" />
