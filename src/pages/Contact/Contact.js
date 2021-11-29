@@ -57,6 +57,7 @@ export default function Contact() {
           alignItems: "center",
           maxWidth: "900px",
           width: "100%",
+          height: "100vh",
           px: "1rem",
           py: "10vh",
         }}
