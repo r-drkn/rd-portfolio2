@@ -87,12 +87,6 @@ export default function Contact() {
             );
           })}
         </ul>
-
-        <div>
-          <p sx={{ fontSize: "2rem", textAlign: "center", py: "3vh" }}>
-            Currently looking for entry level web developer opportunities!
-          </p>
-        </div>
         <svg
           width="283"
           height="28"
