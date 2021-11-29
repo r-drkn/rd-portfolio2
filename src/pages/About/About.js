@@ -43,15 +43,10 @@ export default function About() {
           }}
         >
           <p className="aboutItems">
-            Hi I'm Robert Dirken. I'm a web developer living in Brisbane. I've
-            recently finished a bootcamp at Coder Academy. Here I learned full
-            stack web development in Ruby on Rails and the MERN stack.
+            Hi I'm Robert Dirken. I'm a web developer living in Brisbane.
           </p>
           <p className="aboutItems">
-            I’m currently in the process of building out my portfolio with small
-            jobs and personal projects. My goal throughout this is to not only
-            showcase my current skills but to learn new skills and technologies
-            along the way.
+            I’m currently working as a React/NextJS developer at GO Digital.
           </p>
           <p className="aboutItems">
             When I’m away from the keyboard I enjoy cooking elaborate meals for
@@ -61,14 +56,7 @@ export default function About() {
           <p className="aboutItems">
             Tech I’ve worked with includes: <br />
             <div sx={{ pl: "1rem", fontFamily: "code", color: "third" }}>
-              React, Node, Express, MongoDB, SQL, Ruby/Rails, GSAP, TailwindCSS,
-              MaterialUI, ThemeUI
-            </div>
-          </p>
-          <p className="aboutItems">
-            Tech I’m currently incorporating into my skill set: <br />
-            <div sx={{ pl: "1rem", fontFamily: "code", color: "third" }}>
-              Next.JS, Typescript, A11y
+              React, Typescript, NextJS, Node, Express, MongoDB, Ruby/Rails, GSAP, TailwindCSS
             </div>
           </p>
         </div>
