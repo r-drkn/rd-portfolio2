@@ -1,12 +1,12 @@
 export default function Home() {
 	return (
-		<main className="min-h-full w-full text-gray-800 px-4 py-8 max-w-screen-sm mx-auto">
-			<header className="pb-4 border-b border-gray-800/80">
+		<main className="min-h-full w-full text-gray-800 px-4 py-8 max-w-screen-sm mx-auto pb-24">
+			<header className="pb-4 border-b border-dotted border-gray-800/80">
 				<div className="flex justify-between items-center">
 					<h1 className="text-2xl font-bold">Rob Dirken</h1>
-					<span className="text-lg">Web Developer</span>
+					<span className="text-lg font-medium">Web Developer</span>
 				</div>
-				<div className="flex justify-between gap-x-4">
+				<div className="flex justify-between gap-x-4 items-center">
 					<div className="flex gap-x-4">
 						<a
 							className="underline underline-offset-4 decoration-1"
@@ -39,6 +39,7 @@ export default function Home() {
 					<li>React Native</li>
 				</ul>
 			</section>
+			<div className="mt-8 w-16 border-dotted border-b h-0 border-gray-800/80" />
 			<section className="mt-8">
 				<h2 className="text-xl font-bold tracking-wide">Work</h2>
 				<div className="mt-2">
@@ -113,6 +114,7 @@ export default function Home() {
 					</ul>
 				</div>
 			</section>
+			<div className="mt-8 w-16 border-dotted border-b h-0 border-gray-800/80" />
 			<section className="mt-8">
 				<h2 className="text-xl font-bold tracking-wide">Education</h2>
 				<div className="mt-2">
@@ -138,6 +140,8 @@ export default function Home() {
 					</div>
 				</div>
 			</section>
+			<div className="mt-8 w-16 border-dotted border-b h-0 border-gray-800/80" />
+
 			<section className="mt-8">
 				<h2 className="text-xl font-bold tracking-wide">Interests</h2>
 				<div className="mt-2">
