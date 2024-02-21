@@ -14,7 +14,7 @@ export default function Home() {
 						>
 							Email
 						</a>
-						<span>//</span>
+						<span>{`//`}</span>
 						<a
 							className="underline underline-offset-4 decoration-1"
 							href="tel:0434711288"
