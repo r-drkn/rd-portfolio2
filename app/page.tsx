@@ -112,6 +112,36 @@ export default function Home() {
 							along with Agile methodologies.
 						</li>
 					</ul>
+					<div className="mt-2 flex flex-col items-start ">
+						<h4 className="mb-1 font-medium">Examples:</h4>
+						<a
+							className="underline text-sm"
+							href="https://www.peninsulahotsprings.com/"
+						>
+							<span>Peninsula Hot Springs</span>
+						</a>
+						<a
+							className="underline text-sm"
+							href="https://rollininsurance.com.au/"
+						>
+							<span>Rollin' Insurance</span>
+						</a>
+					</div>
+				</div>
+				<div className="mt-4">
+					<div className="flex justify-between">
+						<div>
+							<h3 className="text-lg font-semibold">
+								Freelance / Side Projects
+							</h3>
+						</div>
+					</div>
+				</div>
+				<div className="mt-4">
+					<p>
+						Happy to share access to repos to see some code and get an idea of
+						what I work in my spare time.
+					</p>
 				</div>
 			</section>
 			<div className="mt-8 w-16 border-dotted border-b h-0 border-gray-800/80" />
